@@ -1,3 +1,9 @@
 [submodule "ext/cmsis"]
 	path = ext/cmsis
 	url = https://github.com/ARM-software/CMSIS_5.git
+[submodule "ext/freertos"]
+	path = ext/freertos
+	url = https://github.com/FreeRTOS/FreeRTOS-Kernel.git
+[submodule "ext/etl"]
+	path = ext/etl
+	url = https://github.com/ETLCPP/etl.git
