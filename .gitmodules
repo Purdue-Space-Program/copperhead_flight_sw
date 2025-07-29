@@ -7,3 +7,6 @@
 [submodule "ext/etl"]
 	path = ext/etl
 	url = https://github.com/ETLCPP/etl.git
+[submodule "hal/stm32h7xx_hal"]
+	path = hal/stm32h7xx_hal
+	url = https://github.com/STMicroelectronics/stm32h7xx-hal-driver.git
