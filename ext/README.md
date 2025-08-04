@@ -12,4 +12,6 @@ environment.
 
 ## FreeRTOS
 Real time operating system. Very stripped down and low level operating system
-that gives very precise control to the implementer.
+that gives very precise control to the implementer. If you want to use this
+library, you must include a `FreeRTOSConfig.h` somewhere. It should be defined
+per-application.

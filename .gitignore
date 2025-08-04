@@ -1,1 +1,4 @@
 build/
+ext/freertos
+ext/cmsis
+ext/etl
