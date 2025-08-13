@@ -65,31 +65,9 @@ int8_t bmm_get_data(magnetic_field_vector_t *data){
     if (data == NULL) return BMM_ERR_GET_DATA;
     int32_t combined_value;
     uint8_t buffer[9];
-    if (bmm_read_register(MAG_X_XLSB, buffer, 9) != BMM_OK) return BMM_ERR_GET_DATA;
-    if (bmm_combine_axis_data(buffer[0], buffer[1], buffer[2], &combined_value) != BMM_OK) return BMM_ERR_GET_DATA;
-    data->x = combined_value; 
-    if (bmm_combine_axis_data(buffer[3], buffer[4], buffer[5], &combined_value) != BMM_OK) return BMM_ERR_GET_DATA;
-    data->y = combined_value;
-    if (bmm_combine_axis_data(buffer[6], buffer[7], buffer[8], &combined_value) != BMM_OK) return BMM_ERR_GET_DATA;
-    data->z = combined_value;
-    return BMM_OK;
-}
-
-/**
- * @brief Combines the xlsb, lsb, and msb values into a single 32-bit integer.
- * 
- * @details The function combines the three components of the magnetic field vector
- * into a single 32-bit integer. It handles the sign extension for negative values.
- * 
- * @param xlsb The least significant byte of the magnetic field vector.
- * @param lsb The middle byte of the magnetic field vector.
- * @param msb The most significant byte of the magnetic field vector.
- * @param result Pointer to store the combined result.
- * @return int8_t Returns BMM_OK on success, or an error code on failure
- */
-int8_t bmm_combine_axis_data(uint8_t xlsb, uint8_t lsb, uint8_t msb, int32_t *result) {
-    if (result == NULL) return BMM_ERR_COMBINE_AXIS_DATA; // Check for null pointer
-    int32_t raw = ((int32_t)msb << 16) | ((int32_t)lsb << 8) | (int32_t)xlsb;
-    *result = (raw << 8) >> 8;
+    if (bmm_read_register(MAG_X_XLSB, buffer, 9) != BMM_OK) return BMM_ERR_GET_DATA; 
+    data->x = ((int32_t)buffer[0] << 16) | ((int32_t)buffer[1] << 8) | (int32_t)buffer[2];    
+    data->y = ((int32_t)buffer[3] << 16) | ((int32_t)buffer[4] << 8) | (int32_t)buffer[5];
+    data->z = ((int32_t)buffer[6] << 16) | ((int32_t)buffer[7] << 8) | (int32_t)buffer[8];
     return BMM_OK;
 }

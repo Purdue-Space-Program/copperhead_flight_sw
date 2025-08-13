@@ -65,4 +65,3 @@ int8_t bmm_init(void);
 int8_t bmm_read_register(registers_t start_reg, uint8_t *values, size_t len);
 int8_t bmm_get_status(uint8_t *status);
 int8_t bmm_get_data(magnetic_field_vector_t *data);
-int8_t bmm_combine_axis_data(uint8_t xlsb, uint8_t lsb, uint8_t msb, int32_t *result);
