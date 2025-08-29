@@ -64,4 +64,9 @@ class ADC_MCU_Driver : public ADC_Driver {
     error_codes_t ads_init(void) override;
     error_codes_t ads_set_channel(ADC_MCU_ChannelID channel) override;
     error_codes_t ads_data_read(int32_t *result, uint8_t status) override;
+    error_codes_t ads_build_command(uint8_t C, uint8_t MUL, ADC_MCU_Register A);
+    error_codes_t ads_read_register(const ADC_MCU_Register reg, uint8_t* value);
+    error_codes_t ads_write_register(ADC_MCU_Register reg, uint8_t value);
+    error_codes_t ads_read_register_mul(const ADC_MCU_Register start_reg, uint8_t* buf, uint8_t size);
+    error_codes_t ads_write_register_mul(ADC_MCU_Register start_reg, uint8_t* values, uint8_t size); 
 };
