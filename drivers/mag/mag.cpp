@@ -12,6 +12,7 @@ public:
 };
 
 class MAG_MCU_Driver : public MAG_Driver {
+public:
     MAG_ErrorCodes bmm_init(void) override {
         uint8_t cmd = 0xb6;
         if (I2C_WRITE(BMM_350_I2C_ADDRESS, CMD, &cmd, 1) != BMM_OK) return BMM_ERR_INIT;
