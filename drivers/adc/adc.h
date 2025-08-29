@@ -16,7 +16,7 @@ typedef enum {
     ADS_ERR,
     ADS_RSPI_ERR,
     ADS_WSPI_ERR,
-} error_codes_t;
+} ADC_ErrorCodes;
 
 typedef enum {
     CONFIG0 = 0x00,
@@ -48,25 +48,24 @@ typedef enum {
 
 class ADC_Driver {
     virtual ~ADC_Driver() = default;
-    virtual error_codes_t ads_init(void) = 0;
-    virtual error_codes_t ads_set_channel(ADC_SIM_ChannelID channel) = 0;
-    virtual error_codes_t ads_data_read(int32_t *result, uint8_t status) = 0;
+    virtual ADC_ErrorCodes ads_init(void) = 0;
+    virtual ADC_ErrorCodes ads_set_channel(ADC_SIM_ChannelID channel) = 0;
+    virtual ADC_ErrorCodes ads_data_read(int32_t *result, uint8_t status) = 0;
 };
 
 class ADC_SIM_Driver : public ADC_Driver {
 public:
-    error_codes_t ads_init(void) override;
-    error_codes_t ads_set_channel(ADC_MCU_ChannelID channel) override;
-    error_codes_t ads_data_read(int32_t *result, uint8_t status) override;
+    ADC_ErrorCodes ads_init(void) override;
+    ADC_ErrorCodes ads_set_channel(ADC_MCU_ChannelID channel) override;
+    ADC_ErrorCodes ads_data_read(int32_t *result, uint8_t status) override;
 };
 
 class ADC_MCU_Driver : public ADC_Driver {
-    error_codes_t ads_init(void) override;
-    error_codes_t ads_set_channel(ADC_MCU_ChannelID channel) override;
-    error_codes_t ads_data_read(int32_t *result, uint8_t status) override;
-    error_codes_t ads_build_command(uint8_t C, uint8_t MUL, ADC_MCU_Register A);
-    error_codes_t ads_read_register(const ADC_MCU_Register reg, uint8_t* value);
-    error_codes_t ads_write_register(ADC_MCU_Register reg, uint8_t value);
-    error_codes_t ads_read_register_mul(const ADC_MCU_Register start_reg, uint8_t* buf, uint8_t size);
-    error_codes_t ads_write_register_mul(ADC_MCU_Register start_reg, uint8_t* values, uint8_t size); 
+    ADC_ErrorCodes ads_init(void) override;
+    ADC_ErrorCodes ads_set_channel(ADC_MCU_ChannelID channel) override;
+    ADC_ErrorCodes ads_data_read(int32_t *result, uint8_t status) override;
+    ADC_ErrorCodes ads_build_command(uint8_t C, uint8_t MUL, ADC_MCU_Register A);
+    ADC_ErrorCodes ads_write_register(ADC_MCU_Register reg, uint8_t value);
+    ADC_ErrorCodes ads_read_register_mul(const ADC_MCU_Register start_reg, uint8_t* buf, uint8_t size);
+    ADC_ErrorCodes ads_write_register_mul(ADC_MCU_Register start_reg, uint8_t* values, uint8_t size); 
 };
