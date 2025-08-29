@@ -47,6 +47,7 @@ typedef enum {
 } ADC_SIM_ChannelID;
 
 class ADC_Driver {
+public:
     virtual ~ADC_Driver() = default;
     virtual ADC_ErrorCodes ads_init(void) = 0;
     virtual ADC_ErrorCodes ads_set_channel(ADC_SIM_ChannelID channel) = 0;

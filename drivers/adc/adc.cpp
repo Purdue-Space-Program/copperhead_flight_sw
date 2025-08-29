@@ -1,6 +1,6 @@
 #include "adc.h"
 
-class ADC_SIM_Driver {
+class ADC_SIM_Driver : public ADC_Driver {
 public:
     ADC_ErrorCodes ads_init(void) override {
         
@@ -16,7 +16,7 @@ public:
 
 };
 
-class ADC_MCU_Driver {
+class ADC_MCU_Driver : public ADC_Driver {
 public:
     ADC_ErrorCodes ads_init(void) override {
         uint8_t cmd = ads_build_command(CMD_RST, 0, 0,);
