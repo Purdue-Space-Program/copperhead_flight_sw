@@ -69,39 +69,7 @@ class PHY_MCU_Driver : public PHY_Driver {
         uint8_t remapped_bits = 0;
         const uint8_t control_positions[4] = {13, 12, 10, 8};
         for (int i = 0; i < 4; i++) {
-            remapped_bits |= ((control_reg >> control_positions[i]) & 0x01) << (3 - i); 
+            remapped_bits |= ((control_reg >> control_positions[i])) 
         }
-        control_reg = remapped_bits;
-        remapped_bits = 0;
-        const uint8_t auto_neg_positions[4] = {8, 7, 6, 5}; 
-        for (int i = 0; i < 4; i++) {
-            remapped_bits |= ((auto_neg_reg >> auto_neg_positions[i]) & 0x01) << (3 - i);
-        }
-        auto_neg_reg = remapped_bits;
-        *mode = (control_reg << 4) | (auto_neg_reg & 0x0F);
-        return PHY_OK;
-    }
-
-    PHY_Error phy_apply_mode(uint8_t mode) {
-        const uint16_t regs[8] = {
-            PHY_CONTROL_REGISTER,
-            PHY_CONTROL_REGISTER,
-            PHY_CONTROL_REGISTER,
-            PHY_CONTROL_REGISTER,
-            PHY_AUTO_NEGOTIATION_REGISTER,
-            PHY_AUTO_NEGOTIATION_REGISTER,
-            PHY_AUTO_NEGOTIATION_REGISTER,
-            PHY_AUTO_NEGOTIATION_REGISTER
-        };
-        const uint8_t bits[8] = {
-            13, 12, 10, 8,
-            8, 7, 6, 5
-        };
-        for (int i = 0; i < 8; i++) {
-            uint8_t bit_val = (mode >> (7 - i)) & 0x01;
-            if (phy_write_register_bit(regs[i], bits[i], bit_val) != PHY_OK)
-                return PHY_ERR_WRITE_REG;
-        }
-        return PHY_OK;
     }
 };
