@@ -12,13 +12,13 @@ HAL_I2C_Mem_Write(&hi2c1, (device_addr) << 1, (reg_addr), I2C_MEMADD_SIZE_8BIT, 
 class MAG_Driver {
 public:
         
-    typedef struct {
+    struct {
         int32_t x;
         int32_t y;
         int32_t z;
     } Magnetic_Field_Vector;
 
-    typedef enum {
+    enum class {
         BMM_OK = 0,
         BMM_ERR_INIT = -1,
         BMM_ERR_READ_REG = -2,
@@ -41,7 +41,7 @@ public:
 class Mag_MCU_Driver : public MAG_Driver {
 public:
 
-    typedef enum {
+    enum class {
         CMD         = 0x7E,
         INT_STATUS  = 0x30,
         MAG_X_XLSB  = 0x31,
