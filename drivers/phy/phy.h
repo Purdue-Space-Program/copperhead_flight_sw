@@ -2,6 +2,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include "stm32h7xx_hal_conf.h"
 
 #define LAN8742A_PHY_ADDRESS 0x01 
 #define mdio_read(addr, reg) 0 
