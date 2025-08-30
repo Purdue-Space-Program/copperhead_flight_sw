@@ -1,6 +1,8 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
+#include "stm32h7xx_hal_conf.h"
+
 #define SPI_READ (dst, size) (0)
 #define SPI_WRITE (src, size) (0)
 
