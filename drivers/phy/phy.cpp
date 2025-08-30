@@ -16,6 +16,7 @@ public:
 };
 
 class PHY_MCU_Driver : public PHY_Driver {
+public:
     PHY_Error phy_init(void) override {
         if (phy_write_register_bit(PHY_CONTROL_REGISTER, PHY_CTRL_SOFT_RESET, true) != PHY_OK)
             return PHY_ERR_INIT;
@@ -34,8 +35,8 @@ class PHY_MCU_Driver : public PHY_Driver {
             default:
                 return PHY_ERR_READ_REG;
         }
-        uint16_t val = mdio_read(LAN8742A_PHY_ADDRESS, reg_addr);
-        if (val == PHY_ERR_MDIO_READ) return PHY_ERR_READ_REG;    
+        uint16_t val; 
+        if (mdio_read(LAN8742A_PHY_ADDRESS, reg_addr, &val) == PHY_ERR_MDIO_READ) return PHY_ERR_READ_REG;    
         *value = val;
         return PHY_OK;
     }
