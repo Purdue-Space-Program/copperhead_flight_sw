@@ -1,7 +1,7 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
-#include "stm32h7xx_hal_conf.h"
+#include "stm32h7xx_hal.h"
 
 #define I2C_READ(device_addr, reg_addr, buffer, len) \
 HAL_I2C_Mem_Read(&hi2c1, (device_addr) << 1, (reg_addr), I2C_MEMADD_SIZE_8BIT, (uint8_t *)(buffer), (len), HAL_MAX_DELAY)
