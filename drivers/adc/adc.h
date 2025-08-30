@@ -9,7 +9,7 @@
 class ADC_Driver {
 public:
 
-    typedef enum {
+    enum class {
         ADS_OK,
         ADS_ERR,
         ADS_RSPI_ERR,
@@ -25,7 +25,7 @@ public:
 class ADC_SIM_Driver : public ADC_Driver {
 public:
     
-    typedef enum {
+    enum class {
     
     } ADC_SIM_ChannelID;
 
@@ -37,14 +37,14 @@ public:
 class ADC_MCU_Driver : public ADC_Driver {
 public:
 
-    typedef enum {
+    enum class {
         CMD_DATA_READ = 0x01,
         CMD_RREG = 0x02,
         CMD_WREG = 0x03,
         CMD_RST = 0x06,     
     } ADC_MCU_Commands;
 
-    typedef enum {
+    enum class {
         CONFIG0 = 0x00,
         CONFIG1 = 0x01,
         MUXSCH 	= 0x02,
@@ -57,7 +57,7 @@ public:
         ID 		= 0x09,
     } ADC_MCU_Register;
 
-    typedef enum {
+    enum class {
         ADS_CH_DIFF0 = 0x00,
         ADS_CH_DIFF1 = 0x01,
         ADS_CH_DIFF2 = 0x02,
