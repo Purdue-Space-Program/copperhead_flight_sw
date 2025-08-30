@@ -1,6 +1,7 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
+#include "stm32h7xx_hal_conf.h"
 
 #define I2C_READ(device_addr, reg_addr, buffer, len) (0)
 #define I2C_WRITE(device_addr, reg_addr, data, len) (0)
