@@ -30,14 +30,14 @@ public:
     };
 
     virtual ~Mag_Driver() = default;
-    virtual ErrorCodes bmm_init(void) = 0;
-    virtual ErrorCodes bmm_get_data(Magnetic_Field_Vector *data) = 0;
+    virtual ErrorCodes init(void) = 0;
+    virtual ErrorCodes get_data(Magnetic_Field_Vector *data) = 0;
 };
 
 class Mag_SIM_Driver : public Mag_Driver {
 public:
-    Mag_Driver::ErrorCodes bmm_init(void) override;
-    Mag_Driver::ErrorCodes bmm_get_data(Mag_Driver::Magnetic_Field_Vector *data) override;
+    Mag_Driver::ErrorCodes init(void) override;
+    Mag_Driver::ErrorCodes get_data(Mag_Driver::Magnetic_Field_Vector *data) override;
 };
 
 class Mag_MCU_Driver : public Mag_Driver {
@@ -57,8 +57,8 @@ public:
         MAG_Z_MSB   = 0x39,
     };
 
-    Mag_Driver::ErrorCodes bmm_init(void) override;
-    Mag_Driver::ErrorCodes bmm_read_register(Registers start_reg, uint8_t *values, size_t len);
-    Mag_Driver::ErrorCodes bmm_get_status(uint8_t *status);
-    Mag_Driver::ErrorCodes bmm_get_data(Mag_Driver::Magnetic_Field_Vector *data) override;
+    Mag_Driver::ErrorCodes init(void) override;
+    Mag_Driver::ErrorCodes read_register(Registers start_reg, uint8_t *values, size_t len);
+    Mag_Driver::ErrorCodes get_status(uint8_t *status);
+    Mag_Driver::ErrorCodes get_data(Mag_Driver::Magnetic_Field_Vector *data) override;
 };
