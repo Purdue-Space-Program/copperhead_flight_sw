@@ -18,6 +18,5 @@ function(add_driver name)
 endfunction()
 
 if(NOT "${TARGET}" STREQUAL NATIVE)
-    add_driver(lan8742a lan8742a.c)
-    add_driver(ads1158 ads1158.c)
+    add_driver(adc adc.cpp)
 endif()
