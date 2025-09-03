@@ -1,37 +1,7 @@
-#pragma once
-#include <stdint.h>
-#include <stddef.h>
-#include <stdbool.h>
+#include "../../api/phy_base.h"
 #include "stm32h7xx_hal.h"
 
-class PHY_Driver {
-public:
-    
-    enum class ErrorCodes {
-        PHY_OK                      = 0,
-        PHY_ERR_INIT                = -1,
-        PHY_ERR_READ_STATUS         = -2,
-        PHY_ERR_READ_REG            = -3,
-        PHY_ERR_READ_MODE_ERROR     = -4,
-        PHY_ERR_WRITE_REG           = -5,
-        PHY_ERR_APPLY_MODE          = -6,
-        PHY_ERR_MDIO_READ           = 0xFFFF
-    };
-
-    virtual ~PHY_Driver() = default;
-    virtual ErrorCodes init(void) = 0;
-    virtual ErrorCodes read_mode(uint8_t *mode) = 0;
-    virtual ErrorCodes apply_mode(const uint8_t mode) = 0;
-};
-
-class PHY_SIM_Driver : public PHY_Driver {
-public:
-    PHY_Driver::ErrorCodes init(void) override;
-    PHY_Driver::ErrorCodes read_mode(uint8_t *mode) override;
-    PHY_Driver::ErrorCodes apply_mode(const uint8_t mode) override;
-};
-
-class PHY_MCU_Driver : public PHY_Driver {
+class PHY_MCU_Driver : public PHY_Base_Driver {
 public:
     
     ETH_HandleTypeDef heth1;
@@ -84,11 +54,11 @@ public:
         PHY_ANEG_10BASE_T               = 5
     };
 
-    PHY_Driver::ErrorCodes init(void) override;
-    PHY_Driver::ErrorCodes read_register(uint8_t reg_addr, uint16_t *value);
-    PHY_Driver::ErrorCodes write_register_bit(const uint8_t reg_addr, uint8_t bit_pos, bool set_bit);
-    PHY_Driver::ErrorCodes low_level_write(uint8_t reg_addr, uint16_t value);
-    PHY_Driver::ErrorCodes read_status(uint16_t *status);
-    PHY_Driver::ErrorCodes read_mode(uint8_t *mode) override;
-    PHY_Driver::ErrorCodes apply_mode(uint8_t mode) override;
+    PHY_Base_Driver::ErrorCodes init(void) override;
+    PHY_Base_Driver::ErrorCodes read_register(uint8_t reg_addr, uint16_t *value);
+    PHY_Base_Driver::ErrorCodes write_register_bit(const uint8_t reg_addr, uint8_t bit_pos, bool set_bit);
+    PHY_Base_Driver::ErrorCodes low_level_write(uint8_t reg_addr, uint16_t value);
+    PHY_Base_Driver::ErrorCodes read_status(uint16_t *status);
+    PHY_Base_Driver::ErrorCodes read_mode(uint8_t *mode) override;
+    PHY_Base_Driver::ErrorCodes apply_mode(uint8_t mode) override;
 };

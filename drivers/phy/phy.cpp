@@ -1,25 +1,12 @@
 #include "phy.h"
-
-PHY_Driver::ErrorCodes PHY_SIM_Driver::init(void) {
-    return ErrorCodes::PHY_OK;
-}
-
-PHY_Driver::ErrorCodes PHY_SIM_Driver::read_mode(uint8_t *mode) {
-    return ErrorCodes::PHY_OK;
-}
-
-PHY_Driver::ErrorCodes PHY_SIM_Driver::apply_mode(const uint8_t mode) {
-    return ErrorCodes::PHY_OK;
-}
-
-PHY_Driver::ErrorCodes PHY_MCU_Driver::init(void) {
+    
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::init(void) {
     if (write_register_bit(PHY_CONTROL_REGISTER, static_cast<uint8_t>(ControlRegister::PHY_CTRL_SOFT_RESET), true) != ErrorCodes::PHY_OK)
         return ErrorCodes::PHY_ERR_INIT;
     return ErrorCodes::PHY_OK;
 }
 
-    
-PHY_Driver::ErrorCodes PHY_MCU_Driver::read_register(uint8_t reg_addr, uint16_t *value){
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(uint8_t reg_addr, uint16_t *value){
     if (value == NULL) return ErrorCodes::PHY_ERR_READ_REG;
     //Validate the register address
     switch (reg_addr) {
@@ -36,7 +23,7 @@ PHY_Driver::ErrorCodes PHY_MCU_Driver::read_register(uint8_t reg_addr, uint16_t 
     return ErrorCodes::PHY_OK;
 }
 
-PHY_Driver::ErrorCodes PHY_MCU_Driver::write_register_bit(const uint8_t reg_addr, uint8_t bit_pos, bool set_bit) {  
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::write_register_bit(const uint8_t reg_addr, uint8_t bit_pos, bool set_bit) {  
     if (bit_pos > 15) return ErrorCodes::PHY_ERR_WRITE_REG;
     uint16_t reg_value;
     if (read_register(reg_addr, &reg_value) != ErrorCodes::PHY_OK) return ErrorCodes::PHY_ERR_WRITE_REG;
@@ -45,18 +32,18 @@ PHY_Driver::ErrorCodes PHY_MCU_Driver::write_register_bit(const uint8_t reg_addr
     return low_level_write(reg_addr, reg_value); 
 }
 
-PHY_Driver::ErrorCodes PHY_MCU_Driver::low_level_write(uint8_t reg_addr, uint16_t value) {
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::low_level_write(uint8_t reg_addr, uint16_t value) {
     if (mdio_write(LAN8742A_PHY_ADDRESS, reg_addr, value) != static_cast<HAL_StatusTypeDef>(ErrorCodes::PHY_OK))
         return ErrorCodes::PHY_ERR_WRITE_REG; 
     return ErrorCodes::PHY_OK;
 }
 
-PHY_Driver::ErrorCodes PHY_MCU_Driver::read_status(uint16_t *status) {
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_status(uint16_t *status) {
     if (status == NULL) return ErrorCodes::PHY_ERR_READ_STATUS;
     return read_register(PHY_STATUS_REGISTER, status);
 }
 
-PHY_Driver::ErrorCodes PHY_MCU_Driver::read_mode(uint8_t *mode) {
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_mode(uint8_t *mode) {
     uint16_t control_reg, auto_neg_reg;
     if (read_register(PHY_CONTROL_REGISTER, &control_reg) != ErrorCodes::PHY_OK)
         return ErrorCodes::PHY_ERR_READ_REG;
