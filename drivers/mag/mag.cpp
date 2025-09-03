@@ -7,7 +7,7 @@ Mag_Base_Driver::ErrorCodes Mag_MCU_Driver::init(void) {
     return ErrorCodes::BMM_OK;
 } 
 
-Mag_Base_Driver::ErrorCodes Mag_MCU_Driver::read_register(Mag_MCU_Driver::Registers start_reg, uint8_t *values, size_t len) {
+Mag_Base_Driver::ErrorCodes Mag_MCU_Driver::read_registers(const Mag_MCU_Driver::Registers start_reg, uint8_t *values, size_t len) {
     if (values == NULL || len == 0) return ErrorCodes::BMM_ERR_READ_REG;
     if (I2C_READ(BMM_350_I2C_ADDRESS, static_cast<uint16_t>(start_reg), values, len) != static_cast<HAL_StatusTypeDef>(ErrorCodes::BMM_OK)) return ErrorCodes::BMM_ERR_READ_REG;
     return ErrorCodes::BMM_OK;
