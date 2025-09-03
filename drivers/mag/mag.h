@@ -1,6 +1,3 @@
-#pragma once
-#include <stdint.h>
-#include <stddef.h>
 #include "../../api/mag_base.h"
 #include "stm32h7xx_hal.h"
 
