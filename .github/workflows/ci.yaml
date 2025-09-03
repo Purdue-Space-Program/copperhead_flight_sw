@@ -16,7 +16,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Install dependencies
-        run: apt-get update && apt-get install -y bash git ninja-build cmake gcc g++
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ninja-build gcc g++
       - name: Checkout
         uses: actions/checkout@v5
         with:
