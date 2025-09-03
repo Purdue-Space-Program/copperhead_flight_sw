@@ -6,7 +6,7 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::init(void) {
     return ErrorCodes::PHY_OK;
 }
 
-PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(uint8_t reg_addr, uint16_t *value){
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(const uint8_t reg_addr, uint16_t *value){
     if (value == NULL) return ErrorCodes::PHY_ERR_READ_REG;
     //Validate the register address
     switch (reg_addr) {
@@ -23,7 +23,7 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(uint8_t reg_addr, uint
     return ErrorCodes::PHY_OK;
 }
 
-PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::write_register_bit(const uint8_t reg_addr, uint8_t bit_pos, bool set_bit) {  
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::write_register_bit(uint8_t reg_addr, uint8_t bit_pos, bool set_bit) {  
     if (bit_pos > 15) return ErrorCodes::PHY_ERR_WRITE_REG;
     uint16_t reg_value;
     if (read_register(reg_addr, &reg_value) != ErrorCodes::PHY_OK) return ErrorCodes::PHY_ERR_WRITE_REG;
