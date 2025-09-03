@@ -28,7 +28,6 @@ else()
     )
 endif()
 
-add_compile_definitions(${TARGET})
 project(copperhead C CXX ASM)
 
 # must come after `project()`
