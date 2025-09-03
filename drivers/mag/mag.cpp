@@ -21,7 +21,7 @@ Mag_Base_Driver::ErrorCodes Mag_MCU_Driver::get_status(uint8_t *status) {
 Mag_Base_Driver::ErrorCodes Mag_MCU_Driver::get_data(Mag_Base_Driver::Magnetic_Field_Vector *data) {
     if (data == NULL) return ErrorCodes::BMM_ERR_GET_DATA;
     uint8_t buffer[9];
-    if (read_register(Registers::MAG_X_XLSB, buffer, 9) != ErrorCodes::BMM_OK) return ErrorCodes::BMM_ERR_GET_DATA; 
+    if (read_registers(Registers::MAG_X_XLSB, buffer, 9) != ErrorCodes::BMM_OK) return ErrorCodes::BMM_ERR_GET_DATA; 
     data->x = ((int32_t)buffer[0] << 16) | ((int32_t)buffer[1] << 8) | (int32_t)buffer[2];    
     data->y = ((int32_t)buffer[3] << 16) | ((int32_t)buffer[4] << 8) | (int32_t)buffer[5];
     data->z = ((int32_t)buffer[6] << 16) | ((int32_t)buffer[7] << 8) | (int32_t)buffer[8];
