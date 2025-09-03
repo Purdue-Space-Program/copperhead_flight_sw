@@ -30,6 +30,8 @@ endif()
 
 project(copperhead C CXX ASM)
 
+include_directories(${CMAKE_SOURCE_DIR}/api)
+
 # must come after `project()`
 string(APPEND CMAKE_EXE_LINKER_FLAGS " -Wl,-Map=${PROJECT_NAME}.map")
 
@@ -44,13 +46,11 @@ message("Target: " ${TARGET})
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_C_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
+add_subdirectory(ext)
+add_subdirectory(applications)
 if("${TARGET}" STREQUAL STM32H730)
-    add_subdirectory(ext)
     add_subdirectory(drivers)
     add_subdirectory(hal)
-    add_subdirectory(applications)
 elseif("${TARGET}" STREQUAL Native)
-    add_subdirectory(ext)
     add_subdirectory(simulations)
-    add_subdirectory(applications)
 endif()

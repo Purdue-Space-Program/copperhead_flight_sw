@@ -18,7 +18,7 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(const uint8_t reg_addr
             return ErrorCodes::PHY_ERR_READ_REG;
     }
     uint32_t temp;
-    if (mdio_read(LAN8742A_PHY_ADDRESS, reg_addr, &temp) != static_cast<HAL_StatusTypeDef>(ErrorCodes::PHY_OK)) return ErrorCodes::PHY_ERR_READ_REG;    
+    if (mdio_read(MDIO_LAN8742A_PHY_ADDRESS, reg_addr, &temp) != static_cast<HAL_StatusTypeDef>(ErrorCodes::PHY_OK)) return ErrorCodes::PHY_ERR_READ_REG;    
     *value = static_cast<uint16_t>(temp & 0xFFFF);
     return ErrorCodes::PHY_OK;
 }
@@ -33,7 +33,7 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::write_register_bit(uint8_t reg_addr,
 }
 
 PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::low_level_write(uint8_t reg_addr, uint16_t value) {
-    if (mdio_write(LAN8742A_PHY_ADDRESS, reg_addr, value) != static_cast<HAL_StatusTypeDef>(ErrorCodes::PHY_OK))
+    if (mdio_write(MDIO_LAN8742A_PHY_ADDRESS, reg_addr, value) != static_cast<HAL_StatusTypeDef>(ErrorCodes::PHY_OK))
         return ErrorCodes::PHY_ERR_WRITE_REG; 
     return ErrorCodes::PHY_OK;
 }

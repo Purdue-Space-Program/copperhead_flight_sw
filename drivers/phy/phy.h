@@ -4,7 +4,7 @@
  * @date 2025-09-03
  */
 
-#include "../../api/phy_base.h"
+#include "phy_base.h"
 #include "stm32h7xx_hal.h"
 
 /**
@@ -12,7 +12,13 @@
  */
 extern ETH_HandleTypeDef heth1;
 
-#define LAN8742A_PHY_ADDRESS 0x01 
+/**
+ * @brief MDIO Address for the PHY, this define is a place holder because
+ * the address is not available on the data sheet, we need to look for it
+ * ourselves
+ */
+
+#define MDIO_LAN8742A_PHY_ADDRESS 0x01 
 
 /**
  * @brief Macro because I did not feel like changing my code
