@@ -67,6 +67,6 @@ public:
      * @param status int8_t pointer to copy the status byte into
      * @note At first looking at the parameters it seems kind of weird, however when looking at the data sheet
      * you see that data is given in 32bits total, 1 byte for status, 3 bytes for actual data
-     */
+   */
     virtual ErrorCodes data_read(int32_t *result, uint8_t *status) = 0;
 };
