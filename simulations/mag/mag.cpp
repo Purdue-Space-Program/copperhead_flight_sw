@@ -1,0 +1,11 @@
+#include "mag.h"
+
+
+Mag_Driver::ErrorCodes Mag_SIM_Driver::init(void) {
+    return ErrorCodes::BMM_OK;
+}
+
+Mag_Driver::ErrorCodes Mag_SIM_Driver::get_data(Mag_Driver::Magnetic_Field_Vector *data) {
+    return ErrorCodes::BMM_OK;
+}
+
