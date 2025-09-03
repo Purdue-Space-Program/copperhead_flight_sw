@@ -1,6 +1,8 @@
 #include "mag.h"
 
 
+#ifdef NATIVE
+
 Mag_Driver::ErrorCodes Mag_SIM_Driver::init(void) {
     return ErrorCodes::BMM_OK;
 }
@@ -9,7 +11,9 @@ Mag_Driver::ErrorCodes Mag_SIM_Driver::get_data(Mag_Driver::Magnetic_Field_Vecto
     return ErrorCodes::BMM_OK;
 }
 
+#endif
 
+#ifdef STM32H730
 
 Mag_Driver::ErrorCodes Mag_MCU_Driver::init(void) {
     uint8_t cmd = 0xb6;
@@ -38,3 +42,4 @@ Mag_Driver::ErrorCodes Mag_MCU_Driver::get_data(Mag_Driver::Magnetic_Field_Vecto
     return ErrorCodes::BMM_OK;
 }
 
+#endif

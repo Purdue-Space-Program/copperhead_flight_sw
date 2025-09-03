@@ -1,6 +1,8 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
+
+#ifdef STM32H730
 #include "stm32h7xx_hal.h"
 
 extern I2C_HandleTypeDef hi2c1;
@@ -10,6 +12,9 @@ HAL_I2C_Mem_Read(&hi2c1, (device_addr) << 1, (reg_addr), I2C_MEMADD_SIZE_8BIT, (
 #define I2C_WRITE(device_addr, reg_addr, data, len) \
 HAL_I2C_Mem_Write(&hi2c1, (device_addr) << 1, (reg_addr), I2C_MEMADD_SIZE_8BIT, (uint8_t *)(data), (len), HAL_MAX_DELAY)
 #define BMM_350_I2C_ADDRESS 0x10
+
+#endif
+
 
 class Mag_Driver {
 public:
@@ -34,11 +39,17 @@ public:
     virtual ErrorCodes get_data(Magnetic_Field_Vector *data) = 0;
 };
 
+#ifdef NATIVE
+
 class Mag_SIM_Driver : public Mag_Driver {
 public:
     Mag_Driver::ErrorCodes init(void) override;
     Mag_Driver::ErrorCodes get_data(Mag_Driver::Magnetic_Field_Vector *data) override;
 };
+
+#endif
+
+#ifdef STM32H730
 
 class Mag_MCU_Driver : public Mag_Driver {
 public:
@@ -62,3 +73,5 @@ public:
     Mag_Driver::ErrorCodes get_status(uint8_t *status);
     Mag_Driver::ErrorCodes get_data(Mag_Driver::Magnetic_Field_Vector *data) override;
 };
+
+#endif
