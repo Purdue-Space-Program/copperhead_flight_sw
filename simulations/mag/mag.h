@@ -28,6 +28,6 @@ public:
      * @param data Magnetic_Field_Vector pointer to a variable to store said data
      * @return Error code, telling us whether or not the function worked
      */
-    Mag_Base_Driver::ErrorCodes get_data(Mag_Driver::Magnetic_Field_Vector *data) override;
+    Mag_Base_Driver::ErrorCodes get_data(Mag_Base_Driver::Magnetic_Field_Vector *data) override;
 };
 
