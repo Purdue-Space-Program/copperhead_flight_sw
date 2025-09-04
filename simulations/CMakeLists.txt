@@ -16,6 +16,4 @@ function(add_simulated_driver name)
 
 endfunction()
 
-if("${TARGET}" STREQUAL NATIVE)
-    add_simulated_driver(mag mag.cpp)
-endif()
+add_simulated_driver(mag mag.cpp)

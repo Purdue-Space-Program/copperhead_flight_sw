@@ -17,6 +17,4 @@ function(add_driver name)
     target_link_libraries(${name} stm_hal cmsis)
 endfunction()
 
-if(NOT "${TARGET}" STREQUAL NATIVE) 
-    add_driver(mag mag.cpp)
-endif()
+add_driver(mag mag.cpp)

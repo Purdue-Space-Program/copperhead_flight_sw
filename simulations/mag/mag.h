@@ -5,7 +5,7 @@
  */
 #pragma once
 
-#include "../../api/mag_base.h"
+#include "mag_base.h"
 
 /**
  * @class Mag_SIM_Driver is derived from Mag_Base_Driver

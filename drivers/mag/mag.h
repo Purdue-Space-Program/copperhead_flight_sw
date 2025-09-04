@@ -4,7 +4,7 @@
  *  @date 2025-09-03
  */
 
-#include "../../api/mag_base.h"
+#include "mag_base.h"
 #include "stm32h7xx_hal.h"
 
 /**
