@@ -4,7 +4,7 @@
  * @date 2025-09-03
  */
 
-#include "../../api/adc_base.h"
+#include "adc_base.h"
 
 
 /**

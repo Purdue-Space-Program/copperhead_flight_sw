@@ -16,6 +16,4 @@ function(add_simulated_driver name)
 
 endfunction()
 
-if(NOT "${TARGET}" STREQUAL NATIVE)
-    add_simulated_driver(adc adc.cpp)
-endif()
+add_simulated_driver(adc adc.cpp)

@@ -7,7 +7,7 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
-#include "../../api/adc_base.h"
+#include "adc_base.h"
 #include "stm32h7xx_hal.h"
 
 /**
