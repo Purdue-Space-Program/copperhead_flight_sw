@@ -1,6 +1,6 @@
 /**
  * @file phy.h
- * @brief ADC_MCU_Driver header file
+ * @brief PHY_MCU_Driver header file
  * @date 2025-09-03
  */
 

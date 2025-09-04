@@ -1,8 +1,8 @@
 ### Usage:
 ### ```cmake
-### add_driver(<driver_name> <driver source files>)
+### add_simulated_driver(<simulated_driver_name> <simulated_driver source files>)
 ### ```
-### `<driver_name>` should be the the directory name
+### `<simulated_driver_name>` should be the the directory name
 function(add_simulated_driver name)
     message("Adding simulated driver: \"${name}\"")
 
