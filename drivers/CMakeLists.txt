@@ -17,7 +17,4 @@ function(add_driver name)
     target_link_libraries(${name} stm_hal cmsis etl)
 endfunction()
 
-if(NOT "${TARGET}" STREQUAL NATIVE)
-    add_driver(lan8742a lan8742a.c)
-    add_driver(ads1158 ads1158.c)
-endif()
+add_driver(mag mag.cpp)
