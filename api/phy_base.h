@@ -31,7 +31,8 @@ public:
         PHY_ERR_READ_MODE_ERROR     = -4,
         PHY_ERR_WRITE_REG           = -5,
         PHY_ERR_APPLY_MODE          = -6,
-        PHY_ERR_MDIO_READ           = 0xFFFF
+        PHY_ERR_MDIO_READ           = 0xFFFF,
+        NULL_PTR                    = -7
     };
 
     virtual ~PHY_Base_Driver() = default;

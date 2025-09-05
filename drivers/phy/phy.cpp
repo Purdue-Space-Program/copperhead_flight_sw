@@ -7,12 +7,12 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::init(void) {
 }
 
 PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(const uint8_t reg_addr, uint16_t *value){
-    if (value == NULL) return ErrorCodes::PHY_ERR_READ_REG;
+    if (value == NULL) return ErrorCodes::NULL_PTR;
     //Validate the register address
     switch (reg_addr) {
-        case 0x00:
-        case 0x01:
-        case 0x04:
+        case PHY_CONTROL_REGISTER
+        case PHY_STATUS_REGISTER:
+        case PHY_AUTO_NEGOTIATION_REGISTER:
             break;
         default:
             return ErrorCodes::PHY_ERR_READ_REG;
@@ -26,9 +26,15 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(const uint8_t reg_addr
 PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::write_register_bit(uint8_t reg_addr, uint8_t bit_pos, bool set_bit) {  
     if (bit_pos > 15) return ErrorCodes::PHY_ERR_WRITE_REG;
     uint16_t reg_value;
-    if (read_register(reg_addr, &reg_value) != ErrorCodes::PHY_OK) return ErrorCodes::PHY_ERR_WRITE_REG;
-    if (set_bit) reg_value |= (1 << bit_pos);
-    else reg_value &= ~(1 << bit_pos);
+    if (read_register(reg_addr, &reg_value) != ErrorCodes::PHY_OK){
+        return ErrorCodes::PHY_ERR_WRITE_REG;
+    }
+    if (set_bit) {
+        reg_value |= (1 << bit_pos);
+    }
+    else {
+        reg_value &= ~(1 << bit_pos);
+    } 
     return low_level_write(reg_addr, reg_value); 
 }
 
@@ -39,7 +45,7 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::low_level_write(uint8_t reg_addr, ui
 }
 
 PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_status(uint16_t *status) {
-    if (status == NULL) return ErrorCodes::PHY_ERR_READ_STATUS;
+    if (status == NULL) return ErrorCodes::NULL_PTR;
     return read_register(PHY_STATUS_REGISTER, status);
 }
 
@@ -68,5 +74,35 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_mode(uint8_t *mode) {
     }
     auto_neg_reg = remapped_bits;
     *mode = (control_reg << 4) | (auto_neg_reg & 0x0F);
+    return ErrorCodes::PHY_OK;
+}
+
+PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::apply_mode(uint8_t mode) {
+    const uint16_t regs[] = {
+        PHY_CONTROL_REGISTER,       
+        PHY_CONTROL_REGISTER,
+        PHY_CONTROL_REGISTER,
+        PHY_CONTROL_REGISTER,
+        PHY_AUTO_NEGOTIATION_REGISTER, 
+        PHY_AUTO_NEGOTIATION_REGISTER,
+        PHY_AUTO_NEGOTIATION_REGISTER,
+        PHY_AUTO_NEGOTIATION_REGISTER
+    };
+    const uint8_t bits[] = {
+        static_cast<const uint8_t>(ControlRegister::PHY_CTRL_SPEED_SELECT), 
+        static_cast<const uint8_t>(ControlRegister::PHY_CTRL_AUTO_NEGOTIATION_ENABLE), 
+        static_cast<const uint8_t>(ControlRegister::PHY_CTRL_ISOLATE), 
+        static_cast<const uint8_t>(ControlRegister::PHY_CTRL_DUPLEX_MODE),   
+        static_cast<const uint8_t>(ANEG_ADV_Register::PHY_ANEG_100BASE_TX_FULL_DUPLEX), 
+        static_cast<const uint8_t>(ANEG_ADV_Register::PHY_ANEG_100BASE_TX), 
+        static_cast<const uint8_t>(ANEG_ADV_Register::PHY_ANEG_10BASE_T_FULL_DUPLEX), 
+        static_cast<const uint8_t>(ANEG_ADV_Register::PHY_ANEG_10BASE_T)       
+    };
+    for (int i = 0; i < 8; i++) {
+        uint8_t bit_val = (mode >> (7 - i)) & 0x01;
+        if (write_register_bit(regs[i], bits[i], bit_val) != ErrorCodes::PHY_OK) {
+            return ErrorCodes::PHY_ERR_READ_REG;
+        }
+    }
     return ErrorCodes::PHY_OK;
 }

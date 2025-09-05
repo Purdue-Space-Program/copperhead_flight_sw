@@ -1,6 +1,6 @@
 /**
  * @file phy.h
- * @brief PHY_MCU_Driver header file
+ * @brief PHY_MCU_Driver header file, data sheet: https://ww1.microchip.com/downloads/en/DeviceDoc/8742a.pdf
  * @date 2025-09-03
  */
 
@@ -34,6 +34,10 @@ extern ETH_HandleTypeDef heth1;
 #define mdio_write(addr, reg, value) \
     HAL_ETH_WritePHYRegister(&heth1, (addr), (reg), (uint16_t)(value))
 
+/**
+ * These are on page 66 of the data sheet
+ */
+
 #define PHY_CONTROL_REGISTER 0x00 
 #define PHY_STATUS_REGISTER 0x01 
 #define PHY_AUTO_NEGOTIATION_REGISTER 0x04
@@ -50,6 +54,7 @@ public:
     /**
      * @enum ControlRegister
      * @brief Control Register position numbers
+     * @note Page 67 of the data sheet
      */     
     
     enum class ControlRegister {
@@ -66,6 +71,7 @@ public:
     /**
      * @enum StatusRegister
      * @brief Status Register position numbers
+     * @note Page 68 of the data sheet
      */
 
     enum class StatusRegister {
@@ -90,6 +96,7 @@ public:
     /**
      * @enum ANEG_ADV_Register
      * @brief Autonegotiation advertisement register position numbers
+     * @note Page 72 of the data sheet
      */
     
      enum class ANEG_ADV_Register {
