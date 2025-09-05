@@ -10,7 +10,7 @@ PHY_Base_Driver::ErrorCodes PHY_MCU_Driver::read_register(const uint8_t reg_addr
     if (value == NULL) return ErrorCodes::NULL_PTR;
     //Validate the register address
     switch (reg_addr) {
-        case PHY_CONTROL_REGISTER
+        case PHY_CONTROL_REGISTER:
         case PHY_STATUS_REGISTER:
         case PHY_AUTO_NEGOTIATION_REGISTER:
             break;
