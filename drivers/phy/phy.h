@@ -111,7 +111,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    PHY_Base_Driver::ErrorCodes init(void) override;
+    etl::expected<void, PHY_Base_Driver::ErrorCode> init(void) override;
 
     /**
      * @brief Reads a register for the LAN8472A
@@ -119,7 +119,7 @@ public:
      * @param value variable to copy the value of the register into
      */
 
-    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_register(const uint8_t reg_addr);
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCode> read_register(const uint8_t reg_addr);
     
     /**
      * @brief Writes to a register bit (only one bit of the register)
@@ -129,7 +129,7 @@ public:
      * @return Error codes so we know whether or not the function worked 
      */
 
-    PHY_Base_Driver::ErrorCodes write_register_bit(uint8_t reg_addr, uint8_t bit_pos, bool set_bit);
+    PHY_Base_Driver::ErrorCode write_register_bit(uint8_t reg_addr, uint8_t bit_pos, bool set_bit);
 
     /**
      * @brief Reads the current status of the LAN8742A
@@ -137,7 +137,7 @@ public:
      * @return Error codes so we know whether or not the function worked
      */
 
-    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_status(void);
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCode> read_status(void);
 
     /**
      * @brief Reads the current status of the LAN8742A, overrides the base function
@@ -145,12 +145,12 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_mode(void) override;
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCode> read_mode(void) override;
 
     /**
      * @brief Applies a mode to the LAN8742A, overrides the base function
      * @param mode the mode we want to set the PHY to
      * @return Error code so we know whether or not the function worked
      */
-    PHY_Base_Driver::ErrorCodes apply_mode(uint8_t mode) override;
+    etl::expected<void, PHY_Base_Driver::ErrorCode> apply_mode(uint8_t mode) override;
 };

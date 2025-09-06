@@ -21,10 +21,10 @@
 class PHY_Base_Driver {
 public:
     /**
-     * @enum ErrorCodes
+     * @enum ErrorCode
      * @brief Provides error codes so there are no magic numbers
      */    
-    enum class ErrorCodes {
+    enum class ErrorCode {
         PHY_OK                      = 0,
         PHY_ERR_INIT                = -1,
         PHY_ERR_READ_STATUS         = -2,
@@ -41,19 +41,19 @@ public:
      * @brief Initialization function for the PHY driver
      * @return Error code so we know whether or not the function worked
      */
-    virtual ErrorCodes init(void) = 0;
+    virtual etl::expected<void, ErrorCode> init(void) = 0;
 
     /**
      * @brief Read the current mode of the PHY
      * @param mode uint8_t pointer to copy the current mode into
      * @return Error code so we know whether or not the function worked
      */
-    virtual etl::expected<uint16_t, ErrorCodes> read_mode(void) = 0;
+    virtual etl::expected<uint16_t, ErrorCode> read_mode(void) = 0;
 
     /**
      * @brief Applies a mode to the PHY
      * @param mode const uint8_t mode to apply to the PHY
      * @return Error code so we know whether or not the function worked
      */
-    virtual ErrorCodes apply_mode(const uint8_t mode) = 0;
+    virtual etl::expected<void, ErrorCode> apply_mode(const uint8_t mode) = 0;
 };

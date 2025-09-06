@@ -20,14 +20,14 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    PHY_Base_Driver::ErrorCodes init(void) override;
+    etl::expected<void, PHY_Base_Driver::ErrorCode> init(void) override;
 
     /**
      * @brief Reads the current mode of the simulated PHY, overrides the base function
      * @param mode pointer copies the current mode into the variable passed
      * @return Error code so we know whether or not the function worked 
      */
-    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_mode(void) override;
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCode> read_mode(void) override;
 
     /**
      * @brief Applies a mode to the simulated PHY, overrides the base function
@@ -35,5 +35,5 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    PHY_Base_Driver::ErrorCodes apply_mode(const uint8_t mode) override;
+    etl::expected<void, PHY_Base_Driver::ErrorCode> apply_mode(const uint8_t mode) override;
 };
