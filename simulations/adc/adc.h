@@ -19,7 +19,7 @@ public:
      * @brief Initializes the simulated ADC, overrides the base function
      * @return Error code telling us whether or not the function worked 
      */
-    etl::expected<void, ErrorCodes> init(void) override;
+    etl::expected<void, ErrorCode> init(void) override;
 
     /**
      * @brief Sets the channel of the simulated ADC, overrides the base function
@@ -27,7 +27,7 @@ public:
      * @return Error code telling us whether or not the function worked
      */
 
-    etl::expected<void, ErrorCodes> set_channel(ChannelID channel) override;
+    etl::expected<void, ErrorCode> set_channel(ChannelID channel) override;
 
     /**
      * @brief Reads the data from the simulated ADC, overrides the base function
@@ -36,5 +36,5 @@ public:
      * @return Error code telling us whether or not the function worked
      */
 
-    etl::expected<uint16_t, ErrorCodes> data_read(void) override;
+    etl::expected<uint16_t, ErrorCode> data_read(void) override;
 };

@@ -73,7 +73,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCodes> init(void) override;
+    etl::expected<void, ADC_Base_Driver::ErrorCode> init(void) override;
 
     /**
      * @brief Sets the channel for the ADS1158, overrides the base function
@@ -81,7 +81,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCodes> set_channel(ADC_Base_Driver::ChannelID channel) override;
+    etl::expected<void, ADC_Base_Driver::ErrorCode> set_channel(ADC_Base_Driver::ChannelID channel) override;
 
     /**
      * @brief Reads the data from the register, overrides the base function
@@ -90,7 +90,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<uint16_t, ADC_Base_Driver::ErrorCodes> data_read(void) override;
+    etl::expected<uint16_t, ADC_Base_Driver::ErrorCode> data_read(void) override;
     
     /**
      * @brief Builds a command, makes functions 10x easier to implement and easier to use commands
@@ -109,7 +109,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCodes> read_register(const Register reg, uint8_t* value);
+    etl::expected<void, ADC_Base_Driver::ErrorCode> read_register(const Register reg, uint8_t* value);
     
     /**
      * @brief Writes to a register
@@ -118,7 +118,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCodes> write_register(Register reg, uint8_t value);
+    etl::expected<void, ADC_Base_Driver::ErrorCode> write_register(Register reg, uint8_t value);
 
     /**
      * @brief Reads multiple registers
@@ -128,7 +128,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCodes> read_register_mul(const Register start_reg, uint8_t* buf, uint8_t size);
+    etl::expected<void, ADC_Base_Driver::ErrorCode> read_register_mul(const Register start_reg, uint8_t* buf, uint8_t size);
     
     /**
      * @brief Writes to multiple registers
@@ -138,5 +138,5 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCodes> write_register_mul(Register start_reg, uint8_t* values, uint8_t size); 
+    etl::expected<void, ADC_Base_Driver::ErrorCode> write_register_mul(Register start_reg, uint8_t* values, uint8_t size); 
 };
