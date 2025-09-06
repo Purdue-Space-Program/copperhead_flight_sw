@@ -43,3 +43,12 @@ jobs:
           fetch-depth: 0
       - name: Build
         run: sh ci/build_cross.sh
+  format:
+    runs-on: ubuntu-latest
+    container:
+      image: cjschoet/copperhead_env:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Build
+        run: sh ci/check_format.sh
