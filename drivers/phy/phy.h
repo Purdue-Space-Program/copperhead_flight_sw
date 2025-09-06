@@ -99,7 +99,7 @@ public:
      * @note Page 72 of the data sheet
      */
     
-     enum class ANEG_ADV_Register {
+    enum class ANEG_ADV_Register {
         PHY_ANEG_100BASE_TX_FULL_DUPLEX = 8, 
         PHY_ANEG_100BASE_TX             = 7, 
         PHY_ANEG_10BASE_T_FULL_DUPLEX   = 6,
@@ -119,7 +119,7 @@ public:
      * @param value variable to copy the value of the register into
      */
 
-    PHY_Base_Driver::ErrorCodes read_register(const uint8_t reg_addr, uint16_t *value);
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_register(const uint8_t reg_addr);
     
     /**
      * @brief Writes to a register bit (only one bit of the register)
@@ -132,21 +132,12 @@ public:
     PHY_Base_Driver::ErrorCodes write_register_bit(uint8_t reg_addr, uint8_t bit_pos, bool set_bit);
 
     /**
-     * @brief Helper variable for the write_register_bit function
-     * @param reg_addr address of the register to write to
-     * @param value to value to write to said register
-     * @return Error codes so we know whether or not the function worked
-     */
-
-    PHY_Base_Driver::ErrorCodes low_level_write(uint8_t reg_addr, uint16_t value);
-
-    /**
      * @brief Reads the current status of the LAN8742A
      * @param status pointer to a variable to copy the status value into
      * @return Error codes so we know whether or not the function worked
      */
 
-    PHY_Base_Driver::ErrorCodes read_status(uint16_t *status);
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_status(void);
 
     /**
      * @brief Reads the current status of the LAN8742A, overrides the base function
@@ -154,7 +145,7 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    PHY_Base_Driver::ErrorCodes read_mode(uint8_t *mode) override;
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_mode(void) override;
 
     /**
      * @brief Applies a mode to the LAN8742A, overrides the base function

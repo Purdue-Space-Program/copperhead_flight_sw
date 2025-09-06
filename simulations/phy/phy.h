@@ -27,7 +27,7 @@ public:
      * @param mode pointer copies the current mode into the variable passed
      * @return Error code so we know whether or not the function worked 
      */
-    PHY_Base_Driver::ErrorCodes read_mode(uint8_t *mode) override;
+    etl::expected<uint16_t, PHY_Base_Driver::ErrorCodes> read_mode(void) override;
 
     /**
      * @brief Applies a mode to the simulated PHY, overrides the base function

@@ -8,6 +8,7 @@
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>
+#include <etl/expected.h>
 
 /**
  * @class PHY_Base_Driver
@@ -47,7 +48,7 @@ public:
      * @param mode uint8_t pointer to copy the current mode into
      * @return Error code so we know whether or not the function worked
      */
-    virtual ErrorCodes read_mode(uint8_t *mode) = 0;
+    virtual etl::expected<uint16_t, ErrorCodes> read_mode(void) = 0;
 
     /**
      * @brief Applies a mode to the PHY
