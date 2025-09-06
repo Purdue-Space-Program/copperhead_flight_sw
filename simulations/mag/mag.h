@@ -21,7 +21,7 @@ public:
      * @brief Initialized the simulated driver
      * @return Error code, telling us whether or not the function worked
      */
-    etl::expected<void ,Mag_Base_Driver::ErrorCode> init(void) override;
+    etl::expected<void, Mag_Base_Driver::ErrorCode> init(void) override;
 
     /**
      * @brief Gets the data from the simulated driver
