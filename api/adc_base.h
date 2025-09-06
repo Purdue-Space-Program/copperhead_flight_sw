@@ -7,6 +7,7 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
+#include <etl/expected.h>
 
 /**
  * @class ADC_Base_Driver
@@ -51,7 +52,7 @@ public:
      * @return Error Codes telling us whether or not the function worked
      */
 
-    virtual ErrorCodes init(void) = 0;
+    virtual etl::expected<void, ErrorCodes> init(void) = 0;
 
     /**
      * @brief Sets the current channel
@@ -59,7 +60,7 @@ public:
      * @return Error codes so we know whether or not the function worked
      */
 
-    virtual ErrorCodes set_channel(ChannelID channel) = 0;
+    virtual etl::expected<void, ErrorCodes> set_channel(ChannelID channel) = 0;
 
     /**
      * @brief Reads the data from the ADC
@@ -68,5 +69,5 @@ public:
      * @note At first looking at the parameters it seems kind of weird, however when looking at the data sheet
      * you see that data is given in 32bits total, 1 byte for status, 3 bytes for actual data
    */
-    virtual ErrorCodes data_read(int32_t *result, uint8_t *status) = 0;
+    virtual etl::expected<uint16_t, ErrorCodes> data_read(void) = 0;
 };

@@ -14,7 +14,7 @@ function(add_driver name)
         ${CMAKE_CURRENT_SOURCE_DIR}/${name}
     )
 
-    target_link_libraries(${name} stm_hal cmsis)
+    target_link_libraries(${name} stm_hal cmsis etl)
 endfunction()
 
 add_driver(adc adc.cpp)
