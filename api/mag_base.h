@@ -7,6 +7,7 @@
 #pragma once
 #include <stdint.h>
 #include <stddef.h>
+#include <etl/expected.h>
 
 /**
  * @class Mag_Base_Driver
@@ -54,7 +55,7 @@ public:
      * @return An error code, telling us whether or not the function worked
      */
 
-    virtual ErrorCodes init(void) = 0;
+    virtual etl::expected<void, ErrorCodes> init(void) = 0;
 
     /**
      * @brief virtual function Gets the magnetic field vector from the magnetometer
@@ -62,5 +63,5 @@ public:
      * @return An error code, telling us whether or not the function worked
      */
 
-    virtual ErrorCodes get_data(Magnetic_Field_Vector *data) = 0;
+    virtual etl::expected<Magnetic_Field_Vector, ErrorCodes> get_data(void) = 0;
 };

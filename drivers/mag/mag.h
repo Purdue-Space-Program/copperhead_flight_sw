@@ -65,7 +65,7 @@ public:
      * @return Error code, tells us if the function worked or not
      */
 
-    Mag_Base_Driver::ErrorCodes init(void) override;
+    etl::expected<void, Mag_Base_Driver::ErrorCodes> init(void) override;
 
     /**
      * @brief Reads a register and pastes that value into a variable
@@ -77,7 +77,7 @@ public:
      * to specify the length
      */
 
-    Mag_Base_Driver::ErrorCodes read_registers(const Registers start_reg, uint8_t *values, size_t len);
+    etl::expected<void, Mag_Base_Driver::ErrorCodes> read_registers(const Registers start_reg, uint8_t *values, size_t len);
     
     /**
      * @brief Gets the status of the BMM350 magnetometer
@@ -85,7 +85,7 @@ public:
      * @return Error code telling us whether or not the function worked
      */
 
-    Mag_Base_Driver::ErrorCodes get_status(uint8_t *status);
+    etl::expected<void, Mag_Base_Driver::ErrorCodes> get_status(uint8_t *status);
 
     /**
      * @brief Gets the data from the BMM350 magnetometer, overrides the base_driver
@@ -93,6 +93,6 @@ public:
      * into
      * @return Error code telling us whether or not the function worked
      */
-    Mag_Base_Driver::ErrorCodes get_data(Mag_Base_Driver::Magnetic_Field_Vector *data) override;
+    etl::expected<Mag_Base_Driver::Magnetic_Field_Vector, Mag_Base_Driver::ErrorCodes> get_data(void) override;
 };
 

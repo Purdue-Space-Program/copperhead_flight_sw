@@ -13,7 +13,7 @@ function(add_simulated_driver name)
     target_include_directories(${name} INTERFACE
         ${CMAKE_CURRENT_SOURCE_DIR}/${name}
     )
-
+    target_link_libraries(${name} etl)
 endfunction()
 
 add_simulated_driver(mag mag.cpp)
