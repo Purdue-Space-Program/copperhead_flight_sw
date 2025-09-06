@@ -21,13 +21,13 @@ public:
      * @brief Initialized the simulated driver
      * @return Error code, telling us whether or not the function worked
      */
-    etl::expected<void ,Mag_Base_Driver::ErrorCodes> init(void) override;
+    etl::expected<void ,Mag_Base_Driver::ErrorCode> init(void) override;
 
     /**
      * @brief Gets the data from the simulated driver
      * @param data Magnetic_Field_Vector pointer to a variable to store said data
      * @return Error code, telling us whether or not the function worked
      */
-    etl::expected <Mag_Base_Driver::Magnetic_Field_Vector, Mag_Base_Driver::ErrorCodes> get_data(void) override;
+    etl::expected <Mag_Base_Driver::Magnetic_Field_Vector, Mag_Base_Driver::ErrorCode> get_data(void) override;
 };
 

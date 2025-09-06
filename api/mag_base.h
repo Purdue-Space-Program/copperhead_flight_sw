@@ -35,11 +35,11 @@ public:
     };
     
     /**
-     * @enum ErrorCodes
+     * @enum ErrorCode
      * @brief Removes the usage of magic numbers in code, return values mean something
      */
 
-    enum class ErrorCodes {
+    enum class ErrorCode {
         BMM_OK = 0,
         BMM_ERR_INIT = -1,
         BMM_ERR_READ_REG = -2,
@@ -55,7 +55,7 @@ public:
      * @return An error code, telling us whether or not the function worked
      */
 
-    virtual etl::expected<void, ErrorCodes> init(void) = 0;
+    virtual etl::expected<void, ErrorCode> init(void) = 0;
 
     /**
      * @brief virtual function Gets the magnetic field vector from the magnetometer
@@ -63,5 +63,5 @@ public:
      * @return An error code, telling us whether or not the function worked
      */
 
-    virtual etl::expected<Magnetic_Field_Vector, ErrorCodes> get_data(void) = 0;
+    virtual etl::expected<Magnetic_Field_Vector, ErrorCode> get_data(void) = 0;
 };
