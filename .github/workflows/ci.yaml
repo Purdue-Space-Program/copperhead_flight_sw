@@ -8,6 +8,8 @@ on:
       - drivers/**/*
       - applications/**/*
       - hal/**/*
+      - ci/**/*
+      - .github/**/*
       - .gitmodules
 concurrency:
   # Cancels pending runs when a PR gets updated.
@@ -30,7 +32,7 @@ jobs:
           submodules: true
           fetch-depth: 0
       - name: Build
-        run: sh ci/build_native.sh
+        run: bash ci/build_native.sh
   stm32h730-release:
     runs-on: ubuntu-latest
     container:
@@ -42,4 +44,13 @@ jobs:
           submodules: true
           fetch-depth: 0
       - name: Build
-        run: sh ci/build_cross.sh
+        run: bash ci/build_cross.sh
+  format:
+    runs-on: ubuntu-latest
+    container:
+      image: cjschoet/copperhead_env:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Build
+        run: bash ci/check_format.sh
