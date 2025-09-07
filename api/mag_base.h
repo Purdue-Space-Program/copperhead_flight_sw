@@ -5,9 +5,9 @@
  */
 
 #pragma once
-#include <stdint.h>
-#include <stddef.h>
 #include <etl/expected.h>
+#include <stddef.h>
+#include <stdint.h>
 
 /**
  * @class Mag_Base_Driver
@@ -20,26 +20,28 @@
  * between the 2 environments Native and STM32H730.
  */
 
-class Mag_Base_Driver {
-public:
-    
+class Mag_Base_Driver
+{
+  public:
     /**
      * @struct Magnetic_Field_Vector
      * @brief Represents the magnetic field vector in 3 dimensions
      */
 
-    struct Magnetic_Field_Vector {
+    struct Magnetic_Field_Vector
+    {
         int32_t x;
         int32_t y;
         int32_t z;
     };
-    
+
     /**
      * @enum ErrorCode
      * @brief Removes the usage of magic numbers in code, return values mean something
      */
 
-    enum class ErrorCode {
+    enum class ErrorCode
+    {
         BMM_OK = 0,
         BMM_ERR_INIT = -1,
         BMM_ERR_READ_REG = -2,
@@ -47,9 +49,9 @@ public:
         BMM_ERR_GET_DATA = -4,
         BMM_ERR_COMBINE_AXIS_DATA = -5,
     };
-    
+
     virtual ~Mag_Base_Driver() = default;
-    
+
     /**
      * @brief virtual function Initializes the magnetometer
      * @return An error code, telling us whether or not the function worked
