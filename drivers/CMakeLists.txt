@@ -17,4 +17,8 @@ function(add_driver name)
     target_link_libraries(${name} stm_hal cmsis etl)
 endfunction()
 
+<<<<<<< HEAD
 add_driver(mag mag.cpp)
+=======
+add_driver(phy phy.cpp)
+>>>>>>> main
