@@ -1,0 +1,56 @@
+name: ci
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+    paths:
+      - drivers/**/*
+      - applications/**/*
+      - hal/**/*
+      - ci/**/*
+      - .github/**/*
+      - .gitmodules
+concurrency:
+  # Cancels pending runs when a PR gets updated.
+  group: ${{ github.head_ref || github.run_id }}-${{ github.actor }}
+  cancel-in-progress: true
+permissions:
+  # Sets permission policy for `GITHUB_TOKEN`
+  contents: read
+jobs:
+  x86_64-linux-release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -y
+          sudo apt-get install -y ninja-build gcc g++
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Build
+        run: bash ci/build_native.sh
+  stm32h730-release:
+    runs-on: ubuntu-latest
+    container:
+      image: cjschoet/copperhead_env:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+        with:
+          submodules: true
+          fetch-depth: 0
+      - name: Build
+        run: bash ci/build_cross.sh
+  format:
+    runs-on: ubuntu-latest
+    container:
+      image: cjschoet/copperhead_env:latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v5
+      - name: Build
+        run: bash ci/check_format.sh
