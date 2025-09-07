@@ -6,18 +6,18 @@
 
 #include "adc_base.h"
 
-
 /**
  * @class ADC_SIM_Driver derived from the ADC_Base_Driver class
  * @brief Simulated driver for the ADS1158
  * @note Only builds when the environment is set to "Native"
  */
 
-class ADC_SIM_Driver : public ADC_Base_Driver {
-public:
+class ADC_SIM_Driver : public ADC_Base_Driver
+{
+  public:
     /**
      * @brief Initializes the simulated ADC, overrides the base function
-     * @return Error code telling us whether or not the function worked 
+     * @return Error code telling us whether or not the function worked
      */
     etl::expected<void, ErrorCode> init(void) override;
 

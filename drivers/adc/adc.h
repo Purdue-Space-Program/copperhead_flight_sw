@@ -5,10 +5,10 @@
  */
 
 #pragma once
-#include <stdint.h>
-#include <stddef.h>
 #include "adc_base.h"
 #include "stm32h7xx_hal.h"
+#include <stddef.h>
+#include <stdint.h>
 
 /**
  * @brief Expects the user to figure out which spi peripheral they want to communicate with BEFORE
@@ -21,7 +21,7 @@ extern SPI_HandleTypeDef hspi1;
  * @brief Macro because I did not feel like changing the code.
  */
 
-#define SPI_READ(dst, size) HAL_SPI_Receive(&hspi1, (uint8_t *)dst , size, HAL_MAX_DELAY)
+#define SPI_READ(dst, size) HAL_SPI_Receive(&hspi1, (uint8_t *)dst, size, HAL_MAX_DELAY)
 
 /**
  * @brief Macro because I did not feeling like changing the code
@@ -35,37 +35,39 @@ extern SPI_HandleTypeDef hspi1;
  * @note Will only build when the environment is set to "STM32H730"
  */
 
-class ADC_MCU_Driver : public ADC_Base_Driver {
-public:
-    
+class ADC_MCU_Driver : public ADC_Base_Driver
+{
+  public:
     /**
      * @enum Commands
      * @brief Organizes command names and values to call such command
      */
 
-    enum class Commands {
+    enum class Commands
+    {
         CMD_DATA_READ = 0x01,
         CMD_RREG = 0x02,
         CMD_WREG = 0x03,
-        CMD_RST = 0x06,     
+        CMD_RST = 0x06,
     };
 
     /**
      * @enum Register
      * @brief Organizes the Register names and addresses, no magic numbers
      */
-    
-    enum class Register {
+
+    enum class Register
+    {
         CONFIG0 = 0x00,
         CONFIG1 = 0x01,
-        MUXSCH 	= 0x02,
-        MUXDIF 	= 0x03,
-        MUXSG0 	= 0x04,
-        MUXSG1 	= 0x05,
-        SYSRED 	= 0x06,
-        GPIO_C 	= 0x07,
-        GPIO_D 	= 0x08,
-        ID 		= 0x09,
+        MUXSCH = 0x02,
+        MUXDIF = 0x03,
+        MUXSG0 = 0x04,
+        MUXSG1 = 0x05,
+        SYSRED = 0x06,
+        GPIO_C = 0x07,
+        GPIO_D = 0x08,
+        ID = 0x09,
     };
 
     /**
@@ -91,17 +93,17 @@ public:
      */
 
     etl::expected<uint16_t, ADC_Base_Driver::ErrorCode> data_read(void) override;
-    
+
     /**
      * @brief Builds a command, makes functions 10x easier to implement and easier to use commands
      * @param C Commands type which takes in the specific command you want to use
      * @param MUL uint8_t type which asks whether or not you want to use the multiplexer
      * @param A Register type which finishes off the rest of the command byte
-     * @return Error code so we know whether or not the function worked 
+     * @return Error code so we know whether or not the function worked
      */
 
     uint8_t build_command(Commands C, uint8_t MUL, Register A);
-    
+
     /**
      * @brief Reads a register
      * @param reg const Register which specifies which register to read from
@@ -109,8 +111,8 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCode> read_register(const Register reg, uint8_t* value);
-    
+    etl::expected<void, ADC_Base_Driver::ErrorCode> read_register(const Register reg, uint8_t *value);
+
     /**
      * @brief Writes to a register
      * @param reg Register type to write into
@@ -128,8 +130,9 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCode> read_register_mul(const Register start_reg, uint8_t* buf, uint8_t size);
-    
+    etl::expected<void, ADC_Base_Driver::ErrorCode> read_register_mul(const Register start_reg, uint8_t *buf,
+                                                                      uint8_t size);
+
     /**
      * @brief Writes to multiple registers
      * @param start_reg Register which is the first register we want to write to
@@ -138,5 +141,6 @@ public:
      * @return Error code so we know whether or not the function worked
      */
 
-    etl::expected<void, ADC_Base_Driver::ErrorCode> write_register_mul(Register start_reg, uint8_t* values, uint8_t size); 
+    etl::expected<void, ADC_Base_Driver::ErrorCode> write_register_mul(Register start_reg, uint8_t *values,
+                                                                       uint8_t size);
 };

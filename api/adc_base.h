@@ -5,9 +5,9 @@
  */
 
 #pragma once
-#include <stdint.h>
-#include <stddef.h>
 #include <etl/expected.h>
+#include <stddef.h>
+#include <stdint.h>
 
 /**
  * @class ADC_Base_Driver
@@ -17,13 +17,15 @@
  * we can change the enviroment when setting the build target
  */
 
-class ADC_Base_Driver {
-public:
+class ADC_Base_Driver
+{
+  public:
     /**
      * @enum ErrorCode
-     * @brief Puts the error codes neatly so we know what error we have 
+     * @brief Puts the error codes neatly so we know what error we have
      */
-    enum class ErrorCode {
+    enum class ErrorCode
+    {
         ADS_OK,
         ADS_ERR,
         ADS_RSPI_ERR,
@@ -34,7 +36,8 @@ public:
      * @enum ChannelID
      * @brief Puts the channel names and IDs so it is organized neatly, no magic numbers
      */
-    enum class ChannelID {
+    enum class ChannelID
+    {
         ADS_CH_DIFF0 = 0x00,
         ADS_CH_DIFF1 = 0x01,
         ADS_CH_DIFF2 = 0x02,
@@ -46,7 +49,7 @@ public:
     };
 
     virtual ~ADC_Base_Driver() = default;
-    
+
     /**
      * @brief Initialization function for the ADC_Driver
      * @return Error Codes telling us whether or not the function worked
@@ -68,6 +71,6 @@ public:
      * @param status int8_t pointer to copy the status byte into
      * @note At first looking at the parameters it seems kind of weird, however when looking at the data sheet
      * you see that data is given in 32bits total, 1 byte for status, 3 bytes for actual data
-   */
+     */
     virtual etl::expected<uint16_t, ErrorCode> data_read(void) = 0;
 };
