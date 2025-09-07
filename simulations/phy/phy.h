@@ -8,13 +8,13 @@
 
 /**
  * @class PHY_SIM_Driver derived from PHY_Base_Driver
- * @brief PHY simulated driver 
+ * @brief PHY simulated driver
  * @note Will only build if the environment is set to "Native"
  */
 
-class PHY_SIM_Driver : public PHY_Base_Driver {
-public:
-
+class PHY_SIM_Driver : public PHY_Base_Driver
+{
+  public:
     /**
      * @brief Initializes the simualated PHY driver, overrides the base function
      * @return Error code so we know whether or not the function worked
@@ -25,7 +25,7 @@ public:
     /**
      * @brief Reads the current mode of the simulated PHY, overrides the base function
      * @param mode pointer copies the current mode into the variable passed
-     * @return Error code so we know whether or not the function worked 
+     * @return Error code so we know whether or not the function worked
      */
     etl::expected<uint16_t, PHY_Base_Driver::ErrorCode> read_mode(void) override;
 

@@ -5,10 +5,10 @@
  */
 
 #pragma once
-#include <stdint.h>
-#include <stddef.h>
-#include <stdbool.h>
 #include <etl/expected.h>
+#include <stdbool.h>
+#include <stddef.h>
+#include <stdint.h>
 
 /**
  * @class PHY_Base_Driver
@@ -18,22 +18,24 @@
  * or "Native"
  */
 
-class PHY_Base_Driver {
-public:
+class PHY_Base_Driver
+{
+  public:
     /**
      * @enum ErrorCode
      * @brief Provides error codes so there are no magic numbers
-     */    
-    enum class ErrorCode {
-        PHY_OK                      = 0,
-        PHY_ERR_INIT                = -1,
-        PHY_ERR_READ_STATUS         = -2,
-        PHY_ERR_READ_REG            = -3,
-        PHY_ERR_READ_MODE_ERROR     = -4,
-        PHY_ERR_WRITE_REG           = -5,
-        PHY_ERR_APPLY_MODE          = -6,
-        PHY_ERR_MDIO_READ           = 0xFFFF,
-        NULL_PTR                    = -7
+     */
+    enum class ErrorCode
+    {
+        PHY_OK = 0,
+        PHY_ERR_INIT = -1,
+        PHY_ERR_READ_STATUS = -2,
+        PHY_ERR_READ_REG = -3,
+        PHY_ERR_READ_MODE_ERROR = -4,
+        PHY_ERR_WRITE_REG = -5,
+        PHY_ERR_APPLY_MODE = -6,
+        PHY_ERR_MDIO_READ = 0xFFFF,
+        NULL_PTR = -7
     };
 
     virtual ~PHY_Base_Driver() = default;
