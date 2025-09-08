@@ -7,6 +7,7 @@ All software that will run on the Copperhead vehicle.
 - CMake
 - Make or Ninja
   - Ninja is significantly faster than Make
+- clang-format and clang-tidy for formatting and linting, respectively
 
 ## Building
 Make sure submodules are pulled in:
