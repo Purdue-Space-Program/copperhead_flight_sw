@@ -132,11 +132,22 @@ if(NOT "${TARGET}" STREQUAL "Native")
         ${CMAKE_CURRENT_SOURCE_DIR}/stm32h7xx_hal/Inc/Legacy
         ${CMAKE_CURRENT_SOURCE_DIR}/config
     )
+    
+    if ("${TARGET}" STREQUAL STM32H730)
 
-    target_compile_definitions(stm_hal PUBLIC
-        USE_HAL_DRIVER
-        STM32H730xx
-    )
+        target_compile_definitions(stm_hal PUBLIC
+            USE_HAL_DRIVER
+            STM32H730xx
+        )
+    
+    elseif("${TARGET}" STREQUAL STM32H753ZI)
+        
+        target_compile_definitions(stm_hal PUBLIC
+            USE_HAL_DRIVER
+            STM32H753xx
+        )
+
+    endif()
 
     target_link_libraries(stm_hal
         PRIVATE cmsis
