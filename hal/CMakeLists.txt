@@ -140,7 +140,7 @@ if(NOT "${TARGET}" STREQUAL "Native")
             STM32H730xx
         )
     
-    elseif("${TARGET}" STREQUAL STM32H753ZI)
+    elseif("${TARGET}" STREQUAL STM32H753)
         
         target_compile_definitions(stm_hal PUBLIC
             USE_HAL_DRIVER

@@ -51,11 +51,12 @@ void BlinkTask(void *argument) {
 
     for (;;)
     {
+       
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_1);
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_2);
         HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3);
         vTaskDelayUntil(&lastWakeTime, pdMS_TO_TICKS(1000));
-
+        
     }
 }
