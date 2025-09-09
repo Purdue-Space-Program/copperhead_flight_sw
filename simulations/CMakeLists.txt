@@ -1,9 +1,9 @@
 ### Usage:
 ### ```cmake
-### add_driver(<driver_name> <driver source files>)
+### add_simulated_driver(<simulated_driver_name> <simulated_driver source files>)
 ### ```
-### `<driver_name>` should be the the directory name
-function(add_driver name)
+### `<simulated_driver_name>` should be the the directory name
+function(add_simulated_driver name)
     message("Adding driver: \"${name}\"")
 
     add_library(${name} OBJECT 
@@ -14,7 +14,7 @@ function(add_driver name)
         ${CMAKE_CURRENT_SOURCE_DIR}/${name}
     )
 
-    target_link_libraries(${name} stm_hal cmsis etl)
+    target_link_libraries(${name} etl)
 endfunction()
 
-add_driver(imu imu.cpp)
+add_simulated_driver(imu imu.cpp)
