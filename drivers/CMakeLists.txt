@@ -16,5 +16,3 @@ function(add_driver name)
 
     target_link_libraries(${name} stm_hal cmsis etl)
 endfunction()
-
-add_driver(phy phy.cpp)

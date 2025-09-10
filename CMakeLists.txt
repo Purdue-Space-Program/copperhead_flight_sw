@@ -5,8 +5,8 @@ if("${TARGET}" STREQUAL "STM32H730")
     set(TARGET "STM32H730" CACHE STRING "Build target")
 endif()
 
-if ("${TARGET}" STREQUAL "STM32H753ZI")
-    set(TARGET "STM32H753ZI" CACHE STRING "Build target")
+if ("${TARGET}" STREQUAL "STM32H753")
+    set(TARGET "STM32H753" CACHE STRING "Build target")
 endif()
 
 if("${TARGET}" STREQUAL "Native")
@@ -34,6 +34,8 @@ endif()
 
 project(copperhead C CXX ASM)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/api)
+
 # must come after `project()`
 string(APPEND CMAKE_EXE_LINKER_FLAGS " -Wl,-Map=${PROJECT_NAME}.map")
 
@@ -50,6 +52,10 @@ set(CMAKE_C_STANDARD 17)
 set(CMAKE_EXPORT_COMPILE_COMMANDS true)
 
 add_subdirectory(ext)
-add_subdirectory(drivers)
-add_subdirectory(hal)
 add_subdirectory(applications)
+if(NOT "${TARGET}" STREQUAL "Native")
+    add_subdirectory(drivers)
+    add_subdirectory(hal)
+else()
+    add_subdirectory(simulations)
+endif()
