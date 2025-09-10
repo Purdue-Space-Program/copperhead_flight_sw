@@ -150,7 +150,7 @@ if(NOT "${TARGET}" STREQUAL "Native")
     endif()
 
     target_link_libraries(stm_hal
-        PRIVATE cmsis
+        PUBLIC cmsis
         PUBLIC  m
     )
 endif()

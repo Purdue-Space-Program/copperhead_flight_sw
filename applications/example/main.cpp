@@ -7,7 +7,9 @@
 
 #include <chrono>
 
+extern "C" {
 #include "stm32h7xx_hal.h"
+}
 
 void PrintTask(void *argument);
 void BlinkTask(void *argument);
@@ -15,17 +17,28 @@ void BlinkTask(void *argument);
 int main(void)
 {
     HAL_Init();
-    SystemClock_Config();
-    MX_GPIO_Init();
+    __HAL_RCC_GPIOE_CLK_ENABLE();
+    
+    GPIO_InitTypeDef GPIO_InitStruct = { 0 };
+
+    GPIO_InitStruct.Pin = GPIO_PIN_1;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+
+    HAL_GPIO_Init(GPIOE, &GPIO_InitStruct);
+/*
     StackType_t task_stack[1024] = {0};
     StaticTask_t idk_bruh[1024] = {0};
-    /*xTaskCreateStatic(PrintTask, "Print", 256, NULL, 1, task_stack, idk_bruh);*/
-    xTaskCreateStatic(BlinkTask, "Blink", 128, NULL, 1, NULL);
+ 
+    xTaskCreateStatic(PrintTask, "Print", 256, NULL, 1, task_stack, idk_bruh);
+    xTaskCreateStatic(BlinkTask, "Blink", 128, NULL, 1, task_stack, idk_bruh);
     vTaskStartScheduler();
-
+*/
     while (true)
     {
-        
+        HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_1);
+        HAL_Delay(500);
     }
 }
 
@@ -49,13 +62,10 @@ void BlinkTask(void *argument) {
 
     TickType_t lastWakeTime = xTaskGetTickCount();
 
-    for (;;)
+    while (1)
     {
        
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_0);
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_1);
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_2);
-        HAL_GPIO_TogglePin(GPIOA, GPIO_PIN_3);
+        HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_1);
         vTaskDelayUntil(&lastWakeTime, pdMS_TO_TICKS(1000));
         
     }
