@@ -19,5 +19,4 @@ Checks: >
 
 WarningsAsErrors: '*'
 HeaderFilterRegex: ''
-FormatStyle: none
 FormatStyle: file
