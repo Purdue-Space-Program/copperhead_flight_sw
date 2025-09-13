@@ -17,6 +17,9 @@ extern "C" {
 void PrintTask(void *argument);
 void BlinkTask(void *argument);
 
+#define TASK_STACK_SIZE 1024
+#define TASK_STATIC_SIZE 1024
+
 int main(void)
 {
     HAL_Init();
@@ -36,6 +39,10 @@ int main(void)
     StaticTask_t idk_bruh[1024] = {0};
     xTaskCreateStatic(PrintTask, "Print", 256, NULL, 1, task_stack, idk_bruh);
     xTaskCreate(BlinkTask, "Blink", 256, NULL, task_stack, idk_bruh);
+    StackType_t task_stack[TASK_STACK_SIZE] = {0};
+    StaticTask_t idk_bruh[TASK_STATIC_SIZE] = {{0}};
+    xTaskCreateStatic(PrintTask, "Print", TASK_STACK_SIZE, NULL, 1, task_stack, idk_bruh);
+
     vTaskStartScheduler();
     */
     while (true)
@@ -55,8 +62,8 @@ void PrintTask(void *argument)
     {
         vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
 
-        auto time = std::chrono::system_clock::now().time_since_epoch().count();
-        printf("[%ld] Hello world!\n", time);
+        auto time = static_cast<long long>(std::chrono::system_clock::now().time_since_epoch().count());
+        printf("[%lld] Hello world!\n", time);
     }
 }
 

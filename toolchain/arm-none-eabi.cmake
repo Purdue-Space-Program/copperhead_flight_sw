@@ -11,14 +11,14 @@ set(COMMON_WARN_FLAGS  "-Wall -fdata-sections -ffunction-sections")
 
 set(_C_INC_LIST
   " -I /usr/lib/arm-none-eabi/include"
-  " -I /usr/lib/gcc/arm-none-eabi/10.3.1/include"
-  " -I /usr/lib/gcc/arm-none-eabi/10.3.1/include-fixed"
+  " -I /usr/lib/gcc/arm-none-eabi/*/include"
+  " -I /usr/lib/gcc/arm-none-eabi/*/include-fixed"
 )
 set(_CXX_INC_LIST
   ${_C_INC_LIST}
-  " -I /usr/lib/arm-none-eabi/include/c++/10.3.1"
-  " -I /usr/lib/arm-none-eabi/include/c++/10.3.1/arm-none-eabi"
-  " -I /usr/lib/arm-none-eabi/include/c++/10.3.1/backward"
+  " -I /usr/lib/arm-none-eabi/include/c++/*"
+  " -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi"
+  " -I /usr/lib/arm-none-eabi/include/c++/*/backward"
 )
 string(JOIN "" ARM_GCC_C_INC_STR   ${_C_INC_LIST})
 string(JOIN "" ARM_GCC_CXX_INC_STR ${_CXX_INC_LIST})
