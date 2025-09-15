@@ -1,8 +1,5 @@
 cmake_minimum_required(VERSION 3.25)
 
-set(CMAKE_CROSSCOMPILING TRUE)
-set(CMAKE_SYSTEM_NAME Generic)
-set(CMAKE_SYSTEM_PROCESSOR arm)
 
 
 ## Default target

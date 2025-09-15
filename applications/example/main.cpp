@@ -7,11 +7,6 @@
 
 #include <chrono>
 
-#ifndef Native
-extern "C" {
-#include "stm32h7xx_hal.h"
-}
-#endif
 
 
 
@@ -96,7 +91,6 @@ void BlinkTask(void *argument)
 
     for (;;)
     {
-        HAL_GPIO_TogglePin(GPIOE, GPIO_PIN_1);
         vTaskDelayUntil(&lastWakeTime, pdMS_TO_TICKS(500));
     }
 }
