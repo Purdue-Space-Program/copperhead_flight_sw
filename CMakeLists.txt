@@ -7,6 +7,8 @@ endif()
 
 if ("${TARGET}" STREQUAL "STM32H753")
     set(TARGET "STM32H753" CACHE STRING "Build target")
+    set(MCU_FAMILY STM32H7)
+    set(MCU_MODEL STM32H753ZI)
 endif()
 
 if("${TARGET}" STREQUAL "Native")
@@ -58,4 +60,13 @@ if(NOT "${TARGET}" STREQUAL "Native")
     add_subdirectory(hal)
 else()
     add_subdirectory(simulations)
+endif()
+
+find_program(OPENOCD openocd)
+if(OPENOCD)
+    add_custom_target(flash
+        COMMAND ${OPENOCD} -f ${CMAKE_SOURCE_DIR}/openocd.cfg -c "program applications/example.bin 0x08000000 verify reset exit"
+        DEPENDS example 
+        COMMENT "Flashing target hardware"
+    )
 endif()

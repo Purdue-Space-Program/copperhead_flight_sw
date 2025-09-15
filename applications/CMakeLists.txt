@@ -22,7 +22,14 @@ function(add_app name)
         target_link_libraries(${name} stm_hal)
     endif()
 
+    add_custom_command(TARGET ${name} POST_BUILD
+        COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${name}> ${name}.hex
+        COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${name}> ${name}.bin
+        COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${name}>
+        COMMENT "Building hex and bin files"
+    )
 
 endfunction()
 
 add_app(example main.cpp)
+
