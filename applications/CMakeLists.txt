@@ -20,14 +20,14 @@ function(add_app name)
 
     if(NOT "${TARGET}" STREQUAL "Native")
         target_link_libraries(${name} stm_hal)
-    endif()
 
-    add_custom_command(TARGET ${name} POST_BUILD
-        COMMAND ${CMAKE_OBJCOPY} -O ihex $<TARGET_FILE:${name}> ${name}.hex
-        COMMAND ${CMAKE_OBJCOPY} -O binary $<TARGET_FILE:${name}> ${name}.bin
-        COMMAND ${CMAKE_SIZE} $<TARGET_FILE:${name}>
-        COMMENT "Building hex and bin files"
-    )
+        if("${TARGET}" STREQUAL "STM32H753")
+            target_sources(example PRIVATE 
+                ${CMAKE_SOURCE_DIR}/hal/startup/stm32h753/startup_stm32h753xx.s
+            )       
+        endif()
+
+    endif()
 
 endfunction()
 

@@ -1,8 +1,15 @@
 cmake_minimum_required(VERSION 3.25)
 
+set(CMAKE_CROSSCOMPILING TRUE)
+set(CMAKE_SYSTEM_NAME Generic)
+set(CMAKE_SYSTEM_PROCESSOR arm)
+
+
 ## Default target
 if("${TARGET}" STREQUAL "STM32H730")
     set(TARGET "STM32H730" CACHE STRING "Build target")
+    set(MCU_FAMILY STM32H7)
+    set(MCU_MODEL STM32H730)
 endif()
 
 if ("${TARGET}" STREQUAL "STM32H753")
@@ -65,7 +72,7 @@ endif()
 find_program(OPENOCD openocd)
 if(OPENOCD)
     add_custom_target(flash
-        COMMAND ${OPENOCD} -f ${CMAKE_SOURCE_DIR}/openocd.cfg -c "program applications/example.bin 0x08000000 verify reset exit"
+        COMMAND ${OPENOCD} -f ${CMAKE_SOURCE_DIR}/openocd.cfg -c "program $<TARGET_FILE:example> verify reset exit"
         DEPENDS example 
         COMMENT "Flashing target hardware"
     )
