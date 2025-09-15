@@ -7,21 +7,26 @@
 
 #include <chrono>
 
-
-
-
 void PrintTask(void *argument);
 void BlinkTask(void *argument);
 
 #define TASK_STACK_SIZE 1024
 #define TASK_STATIC_SIZE 1024
 
+//Temp for testing flash
 #define RCC_AHB4ENR (0x58024400 + 0x0E0)
 #define GPIOB_BASE 0x58020400
+#define DELAY 1000000
+#define BSB0 0
+#define BRB0 16
+#define BSBR 0x18
 
-void simple_delay(volatile uint32_t count) {
-    while(count--) {
+void simple_delay(uint32_t count)
+{
+    while (count > 0)
+    {
         __asm__("nop");
+        count--;
     }
 }
 
@@ -39,21 +44,21 @@ int main(void)
 
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);*/
     
-    *(volatile uint32_t*)(RCC_AHB4ENR) |= (1 << 1);
-    
-    *(volatile uint32_t*)(GPIOB_BASE) |= (1 << 0);
-    *(volatile uint32_t*)(GPIOB_BASE) &= ~(1 << 1);
+    //Clock
+    *(volatile uint32_t *)(RCC_AHB4ENR) |= (1 << 1);
+    //Set as output
+    *(volatile uint32_t *)(GPIOB_BASE) |= (1 << 0);
+    *(volatile uint32_t *)(GPIOB_BASE) &= ~(1 << 1);
+    //Push pull output
+    *(volatile uint32_t *)(GPIOB_BASE + 0x04) &= ~(1 << 0);
 
-    *(volatile uint32_t*)(GPIOB_BASE + 0x04) &= ~(1 << 0);
+    while (true)
+    {
 
-
-    while (1) {
-
-        *(volatile uint32_t*)(GPIOB_BASE + 0x18) = (1 << 0);
-        simple_delay(2000000);
-        *(volatile uint32_t*)(GPIOB_BASE + 0x18) = (1 << 16);
-        simple_delay(2000000);
-
+        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BSB0);
+        simple_delay(DELAY);
+        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BRB0);
+        simple_delay(DELAY);
     }
     /*
     StackType_t task_stack[1024] = {0};
