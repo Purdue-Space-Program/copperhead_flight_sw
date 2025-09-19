@@ -1,101 +1,45 @@
+#include "stm32h7xx_hal.h"
+#include <stdio.h>
 #include "FreeRTOS.h"
-#include "portmacro.h"
 #include "task.h"
 
-#include <stdbool.h>
-#include <stdio.h>
 
-#include <chrono>
+#define DELAY 2000000
 
-void PrintTask(void *argument);
-void BlinkTask(void *argument);
-
-#define TASK_STACK_SIZE 1024
-#define TASK_STATIC_SIZE 1024
-
-//Temp for testing flash
-#define RCC_AHB4ENR (0x58024400 + 0x0E0)
-#define GPIOB_BASE 0x58020400
-#define DELAY 1000000
-#define BSB0 0
-#define BRB0 16
-#define BSBR 0x18
-
-void simple_delay(uint32_t count)
-{
-    while (count > 0)
-    {
-        __asm__("nop");
-        count--;
-    }
-}
-
-int main(void)
-{
-    /* HAL_Init();
+void blink_task(void* pvParameters) {
+    
     __HAL_RCC_GPIOB_CLK_ENABLE();
-
     GPIO_InitTypeDef GPIO_InitStruct = {0};
-
-    GPIO_InitStruct.Pin = GPIO_PIN_7;
+    GPIO_InitStruct.Pin = GPIO_PIN_0;
     GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);*/
-    
-    //Clock
-    *(volatile uint32_t *)(RCC_AHB4ENR) |= (1 << 1);
-    //Set as output
-    *(volatile uint32_t *)(GPIOB_BASE) |= (1 << 0);
-    *(volatile uint32_t *)(GPIOB_BASE) &= ~(1 << 1);
-    //Push pull output
-    *(volatile uint32_t *)(GPIOB_BASE + 0x04) &= ~(1 << 0);
-
-    while (true)
-    {
-
-        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BSB0);
-        simple_delay(DELAY);
-        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BRB0);
-        simple_delay(DELAY);
+    while (true) {
+        // Toggle LED
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+        vTaskDelay(pdMS_TO_TICKS(DELAY));
     }
-    /*
-    StackType_t task_stack[1024] = {0};
-    StaticTask_t idk_bruh[1024] = {0};
-    xTaskCreateStatic(PrintTask, "Print", 256, NULL, 1, task_stack, idk_bruh);
-    xTaskCreate(BlinkTask, "Blink", 256, NULL, task_stack, idk_bruh);
-    StackType_t task_stack[TASK_STACK_SIZE] = {0};
-    StaticTask_t idk_bruh[TASK_STATIC_SIZE] = {{0}};
-    xTaskCreateStatic(PrintTask, "Print", TASK_STACK_SIZE, NULL, 1, task_stack, idk_bruh);
+}
 
+
+int main() {
+
+    HAL_Init();
+
+    xTaskCreate(blink_task, "Blink Task", 128, NULL, 1, NULL);
     vTaskStartScheduler();
-    */
-}
-
-/* PrintTask: prints a message every 1000 ms */
-void PrintTask(void *argument)
-{
-    (void)argument;
-    TickType_t xLastWakeTime = xTaskGetTickCount();
-
-    for (;;)
-    {
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
-
-        auto time = static_cast<long long>(std::chrono::system_clock::now().time_since_epoch().count());
-        printf("[%lld] Hello world!\n", time);
+    while (true) {
+    
     }
+
+    return 0;
 }
 
-void BlinkTask(void *argument)
-{
-    (void)argument;
-
-    TickType_t lastWakeTime = xTaskGetTickCount();
-
-    for (;;)
-    {
-        vTaskDelayUntil(&lastWakeTime, pdMS_TO_TICKS(500));
+void assert_failed(uint8_t* file, uint32_t line) {
+    printf("Assertion failed in file %s on line %lu\n", file, line);
+    while (true) {
+        // Stay here
     }
 }

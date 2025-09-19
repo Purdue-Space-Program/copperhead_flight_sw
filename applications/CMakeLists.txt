@@ -19,7 +19,7 @@ function(add_app name)
     target_link_libraries(${name} etl freertos_kernel)
 
     if(NOT "${TARGET}" STREQUAL "Native")
-        target_link_libraries(${name} stm_hal)
+        target_link_libraries(${name} stm_hal cmsis stm32_system)
 
         if("${TARGET}" STREQUAL "STM32H753")
             target_sources(example PRIVATE 

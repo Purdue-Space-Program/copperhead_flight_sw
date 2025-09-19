@@ -91,6 +91,11 @@ SECTIONS
         __bss_end__ = _ebss;
     } >DTCMRAM
 
+    . = ALIGN(4);
+    _end = .;
+    end = _end;
+    __end__ = _end;
+
     /* Stack */
     .stack :
     {
