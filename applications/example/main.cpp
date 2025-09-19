@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include "task.h"
 #include <stdint.h>
 
 //Temp for testing flash
@@ -9,7 +8,6 @@
 #define BSB0 0
 #define BRB0 16
 #define BSBR 0x18
-#define DELAY 2000000
 
 void simple_delay(uint32_t count) {
     while (count--) {
@@ -35,12 +33,4 @@ int main() {
     }
 
     return 0;
-}
-
-
-void assert_failed(uint8_t* file, uint32_t line) {
-    printf("Assertion failed in file %s on line %lu\n", file, line);
-    while (true) {
-        // Stay here
-    }
 }
