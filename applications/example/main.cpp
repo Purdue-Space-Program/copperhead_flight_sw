@@ -1,41 +1,40 @@
-#include "FreeRTOS.h"
-#include "portmacro.h"
-#include "task.h"
-
-#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 
-#include <chrono>
+// Temp for testing flash
+#define RCC_AHB4ENR (0x58024400 + 0x0E0)
+#define GPIOB_BASE 0x58020400
+#define DELAY 1000000
+#define BSB0 0
+#define BRB0 16
+#define BSBR 0x18
 
-void PrintTask(void *argument);
-
-#define TASK_STACK_SIZE 1024
-#define TASK_STATIC_SIZE 1024
-
-int main(void)
+void simple_delay(uint32_t count)
 {
-    StackType_t task_stack[TASK_STACK_SIZE] = {0};
-    StaticTask_t idk_bruh[TASK_STATIC_SIZE] = {{0}};
-    xTaskCreateStatic(PrintTask, "Print", TASK_STACK_SIZE, NULL, 1, task_stack, idk_bruh);
-
-    vTaskStartScheduler();
-
-    while (true)
+    while (count--)
     {
+        asm("nop");
     }
 }
 
-/* PrintTask: prints a message every 1000 ms */
-void PrintTask(void *argument)
+int main()
 {
-    (void)argument;
-    TickType_t xLastWakeTime = xTaskGetTickCount();
 
-    for (;;)
+    // Clock
+    *(volatile uint32_t *)(RCC_AHB4ENR) |= (1 << 1);
+    // Set as output
+    *(volatile uint32_t *)(GPIOB_BASE) |= (1 << 0);
+    *(volatile uint32_t *)(GPIOB_BASE) &= ~(1 << 1);
+    // Push pull output
+    *(volatile uint32_t *)(GPIOB_BASE + 0x04) &= ~(1 << 0);
+
+    while (true)
     {
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
-
-        auto time = static_cast<long long>(std::chrono::system_clock::now().time_since_epoch().count());
-        printf("[%lld] Hello world!\n", time);
+        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BSB0);
+        simple_delay(DELAY);
+        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BRB0);
+        simple_delay(DELAY);
     }
+
+    return 0;
 }

@@ -8,6 +8,7 @@ All software that will run on the Copperhead vehicle.
 - Make or Ninja
   - Ninja is significantly faster than Make
 - clang-format and clang-tidy for formatting and linting, respectively
+- OpenOCD for flashing
 
 ## Building
 Make sure submodules are pulled in:
@@ -21,6 +22,13 @@ cmake -B build -DTARGET=<TARGET>
 cmake --build build
 ```
 
+To flash, (only available for MCU) run: 
+```bash
+cmake -B buuld -DTARGET=<TARGET>
+cmake --build build --target flash
+```
+
 Supported Targets:
 1. `STM32H730`
 2. `Native`
+3. `STM32H753`
