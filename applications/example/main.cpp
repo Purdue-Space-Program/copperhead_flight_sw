@@ -1,40 +1,61 @@
+#include "projdefs.h"
+#include "stm32h7xx_hal.h"
+#include <cstddef>
 #include <stdint.h>
 #include <stdio.h>
+#include "FreeRTOSConfig.h"
+#include "FreeRTOS.h"
+#include "task.h"
+#include "portmacro.h"
 
-// Temp for testing flash
-#define RCC_AHB4ENR (0x58024400 + 0x0E0)
-#define GPIOB_BASE 0x58020400
-#define DELAY 1000000
-#define BSB0 0
-#define BRB0 16
-#define BSBR 0x18
-
-void simple_delay(uint32_t count)
-{
-    while (count--)
-    {
-        asm("nop");
-    }
-}
-
+void vBlinkTask1(void *pvParameters);
 int main()
 {
+    HAL_Init();
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
 
-    // Clock
-    *(volatile uint32_t *)(RCC_AHB4ENR) |= (1 << 1);
-    // Set as output
-    *(volatile uint32_t *)(GPIOB_BASE) |= (1 << 0);
-    *(volatile uint32_t *)(GPIOB_BASE) &= ~(1 << 1);
-    // Push pull output
-    *(volatile uint32_t *)(GPIOB_BASE + 0x04) &= ~(1 << 0);
+    __HAL_RCC_GPIOB_CLK_ENABLE();
 
+    GPIO_InitStruct.Pin = GPIO_PIN_0;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    xTaskCreate(
+                vBlinkTask1,
+                "Blink",
+                256,
+                NULL,
+                tskIDLE_PRIORITY+1,
+                NULL
+            );
+
+    vTaskStartScheduler();
+    
+    for (;;);
+}
+
+void vBlinkTask1(void *pvParameters) {
+    (void) pvParameters;
+
+    for (;;) {
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+        vTaskDelay(pdMS_TO_TICKS(500));
+    }
+}
+
+#ifdef USE_FULL_ASSERT
+void assert_failed(uint8_t *file, uint32_t line)
+{
+    /* User can add their own implementation to report the file name and line,
+       e.g., printf("Assertion failed: %s:%lu\n", file, line) */
+    (void)file;
+    (void)line;
+    /* Loop forever to aid debugging */
     while (true)
     {
-        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BSB0);
-        simple_delay(DELAY);
-        *(volatile uint32_t *)(GPIOB_BASE + BSBR) = (1 << BRB0);
-        simple_delay(DELAY);
+        __asm__("bkpt #0");
     }
-
-    return 0;
 }
+#endif
