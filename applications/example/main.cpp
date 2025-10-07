@@ -1,41 +1,56 @@
 #include "FreeRTOS.h"
-#include "portmacro.h"
+#include "FreeRTOSConfig.h"
+#include "stm32h7xx_hal.h"
 #include "task.h"
-
-#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 
-#include <chrono>
-
-void PrintTask(void *argument);
-
-#define TASK_STACK_SIZE 1024
-#define TASK_STATIC_SIZE 1024
-
-int main(void)
+void vBlinkTask1(void *pvParameters);
+int main()
 {
-    StackType_t task_stack[TASK_STACK_SIZE] = {0};
-    StaticTask_t idk_bruh[TASK_STATIC_SIZE] = {{0}};
-    xTaskCreateStatic(PrintTask, "Print", TASK_STACK_SIZE, NULL, 1, task_stack, idk_bruh);
+    HAL_Init();
+    GPIO_InitTypeDef GPIO_InitStruct = {0};
+
+    __HAL_RCC_GPIOB_CLK_ENABLE();
+
+    GPIO_InitStruct.Pin = GPIO_PIN_0;
+    GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+    GPIO_InitStruct.Pull = GPIO_NOPULL;
+    GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+    HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+    xTaskCreate(vBlinkTask1, "Blink", 256, NULL, tskIDLE_PRIORITY + 1, NULL);
 
     vTaskStartScheduler();
 
-    while (true)
+    // Should never reach here
+    for (;;)
     {
     }
 }
 
-/* PrintTask: prints a message every 1000 ms */
-void PrintTask(void *argument)
+void vBlinkTask1(void *pvParameters)
 {
-    (void)argument;
-    TickType_t xLastWakeTime = xTaskGetTickCount();
+    (void)pvParameters;
 
     for (;;)
     {
-        vTaskDelayUntil(&xLastWakeTime, pdMS_TO_TICKS(1000));
-
-        auto time = static_cast<long long>(std::chrono::system_clock::now().time_since_epoch().count());
-        printf("[%lld] Hello world!\n", time);
+        HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
+        vTaskDelay(pdMS_TO_TICKS(500));
     }
 }
+
+#ifdef USE_FULL_ASSERT
+void assert_failed(uint8_t *file, uint32_t line)
+{
+    /* User can add their own implementation to report the file name and line,
+       e.g., printf("Assertion failed: %s:%lu\n", file, line) */
+    (void)file;
+    (void)line;
+    /* Loop forever to aid debugging */
+    while (true)
+    {
+        __asm__("bkpt #0");
+    }
+}
+#endif

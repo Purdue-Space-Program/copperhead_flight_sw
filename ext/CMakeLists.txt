@@ -11,12 +11,30 @@ if(NOT "${TARGET}" STREQUAL "Native")
         ${CMAKE_CURRENT_SOURCE_DIR}/stm_device_cmsis/Include
         ${CMAKE_CURRENT_SOURCE_DIR}/cmsis/CMSIS/Core/Include
     )
+    add_library(stm32_system STATIC
+        ${CMAKE_CURRENT_SOURCE_DIR}/stm_device_cmsis/Source/Templates/system_stm32h7xx.c
+    )
+    target_include_directories(stm32_system PRIVATE 
+        ${CMAKE_CURRENT_SOURCE_DIR}/stm_device_cmsis/Include
+        ${CMAKE_CURRENT_SOURCE_DIR}/cmsis/CMSIS/Core/Include
+    )
+
+    if("${TARGET}" STREQUAL "STM32H730")
+        target_compile_definitions(cmsis INTERFACE STM32H730xx)
+        target_compile_definitions(stm32_system PRIVATE STM32H730xx)
+    elseif("${TARGET}" STREQUAL "STM32H753")
+        target_compile_definitions(cmsis INTERFACE STM32H753xx)
+        target_compile_definitions(stm32_system PRIVATE STM32H753xx)
+    endif()
+
 endif()
 
 # FreeRTOS
 set(FREERTOS_HEAP 1 CACHE STRING "" FORCE)
 
 if("${TARGET}" STREQUAL "STM32H730")
+    set(FREERTOS_PORT "GCC_ARM_CM7" CACHE STRING "" FORCE)
+elseif("${TARGET}" STREQUAL "STM32H753")
     set(FREERTOS_PORT "GCC_ARM_CM7" CACHE STRING "" FORCE)
 elseif("${TARGET}" STREQUAL "Native")
     set(FREERTOS_PORT "GCC_POSIX" CACHE STRING "" FORCE)

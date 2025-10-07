@@ -43,8 +43,11 @@ set(CMAKE_CXX_FLAGS_RELEASE_INIT "-Os -g0")
 set(CMAKE_EXECUTABLE_SUFFIX_ASM ".elf")
 set(CMAKE_EXECUTABLE_SUFFIX_C   ".elf")
 set(CMAKE_EXECUTABLE_SUFFIX_CXX ".elf")
-
-set(LDSCRIPT "${CMAKE_SOURCE_DIR}/hal/startup/stm32h730/STM32H730XX_FLASH.ld")
+if("${TARGET}" STREQUAL "STM32H730")
+  set(LDSCRIPT "${CMAKE_SOURCE_DIR}/hal/startup/stm32h730/STM32H730XX_FLASH.ld")
+elseif("${TARGET}" STREQUAL "STM32H753")
+  set(LDSCRIPT "${CMAKE_SOURCE_DIR}/hal/startup/stm32h753/STM32H753XX_FLASH.ld")
+endif()
 set(CMAKE_EXE_LINKER_FLAGS_INIT
   "--sysroot=/usr/lib/arm-none-eabi ${TARGET_FLAGS} -Wl,-T,${LDSCRIPT} --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections -Wl,--print-memory-usage"
 )
