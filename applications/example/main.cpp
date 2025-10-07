@@ -1,9 +1,9 @@
+#include "FreeRTOS.h"
+#include "FreeRTOSConfig.h"
 #include "stm32h7xx_hal.h"
+#include "task.h"
 #include <stdint.h>
 #include <stdio.h>
-#include "FreeRTOSConfig.h"
-#include "FreeRTOS.h"
-#include "task.h"
 
 void vBlinkTask1(void *pvParameters);
 int main()
@@ -19,27 +19,22 @@ int main()
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
     HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
-    xTaskCreate(
-                vBlinkTask1,
-                "Blink",
-                256,
-                NULL,
-                tskIDLE_PRIORITY+1,
-                NULL
-            );
+    xTaskCreate(vBlinkTask1, "Blink", 256, NULL, tskIDLE_PRIORITY + 1, NULL);
 
     vTaskStartScheduler();
 
-    //Should never reach here
-    for (;;) {
-
+    // Should never reach here
+    for (;;)
+    {
     }
 }
 
-void vBlinkTask1(void *pvParameters) {
-    (void) pvParameters;
+void vBlinkTask1(void *pvParameters)
+{
+    (void)pvParameters;
 
-    for (;;) {
+    for (;;)
+    {
         HAL_GPIO_TogglePin(GPIOB, GPIO_PIN_0);
         vTaskDelay(pdMS_TO_TICKS(500));
     }
