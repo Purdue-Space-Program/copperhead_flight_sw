@@ -1,12 +1,9 @@
-#include "projdefs.h"
 #include "stm32h7xx_hal.h"
-#include <cstddef>
 #include <stdint.h>
 #include <stdio.h>
 #include "FreeRTOSConfig.h"
 #include "FreeRTOS.h"
 #include "task.h"
-#include "portmacro.h"
 
 void vBlinkTask1(void *pvParameters);
 int main()
@@ -32,8 +29,11 @@ int main()
             );
 
     vTaskStartScheduler();
-    
-    for (;;);
+
+    //Should never reach here
+    for (;;) {
+
+    }
 }
 
 void vBlinkTask1(void *pvParameters) {
