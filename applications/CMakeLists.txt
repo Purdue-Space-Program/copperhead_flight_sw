@@ -5,6 +5,10 @@
 # ```
 #
 # `<app_name>` should be the the directory name
+
+#cmake_minimum_required(VERSION 3.28)
+#project(flight_sw)
+
 function(add_app name)
     message("Adding application: \"${name}\"")
 
@@ -22,7 +26,6 @@ function(add_app name)
         target_link_libraries(${name} stm_hal)
     endif()
 
-
 endfunction()
 
-add_app(example main.cpp)
+add_app(src main.cpp)

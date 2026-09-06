@@ -1,0 +1,1092 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake:228 (message)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      The target system is: Generic -  - arm
+      The host system is: Linux - 6.8.0-138-generic - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags:  
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags: -c 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags: -Aa 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -Aa 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -D__CLASSIC_C__ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: arm-none-eabi-gcc 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the C compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags:  
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags: -c 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags: --c++ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags: --ec++ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: 
+      Id flags:  
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: --c++ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: --ec++ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: --target=arm-arm-none-eabi;-mcpu=cortex-m3 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: arm-none-eabi-g++ 
+      Build flags: 
+      Id flags: -c;-I__does_not_exist__ 
+      
+      The output was:
+      No such file or directory
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:86 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the CXX compiler is IAR using "" did not match "IAR .+ Compiler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" did not match "(GNU assembler)|(GCC)|(Free Software Foundation)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is AppleClang using "--version" did not match "(Apple (clang|LLVM) version)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is Clang using "--version" did not match "(clang version)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is ARMClang using "--version" did not match "armclang":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is OrangeC using "--version" did not match "occ \\(OrangeC\\) Version":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is HP using "-V" did not match "HP C":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is Intel using "--version" did not match "(ICC)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is IntelLLVM using "--version" did not match "(Intel[^
+      ]+oneAPI)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is SunPro using "-V" did not match "Sun C":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is XL using "-qversion" did not match "XL C":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is MSVC using "-?" did not match "Microsoft":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is TI using "-h" did not match "Texas Instruments":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is IAR using "" did not match "IAR Assembler":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is ARMCC using "" did not match "(ARM Compiler)|(ARM Assembler)|(Arm Compiler)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is NASM using "-v" did not match "(NASM version)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is YASM using "--version" did not match "(yasm)":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is ADSP using "-version" did not match "Analog Devices":
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1144 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is QCC using "-V" did not match "gcc_nto":
+...
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" failed.
+      Compiler: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags:  
+      
+      The output was:
+      1
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x14): undefined reference to `_exit'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-exit.o)
+      exit.c:(.text.exit+0x14): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0xc): undefined reference to `_close'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-closer.o)
+      closer.c:(.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x12): undefined reference to `_lseek'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-lseekr.o)
+      lseekr.c:(.text._lseek_r+0x12): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x12): undefined reference to `_read'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-readr.o)
+      readr.c:(.text._read_r+0x12): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x12): undefined reference to `_write'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-writer.o)
+      writer.c:(.text._write_r+0x12): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-sbrkr.o)
+      sbrkr.c:(.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake:123 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the C compiler identification source file "CMakeCCompilerId.c" succeeded.
+      Compiler: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CMakeCCompilerId.o"
+      
+      The C compiler identification is GNU, found in:
+        /home/mo/code/copperhead_flight_sw/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" failed.
+      Compiler: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags:  
+      
+      The output was:
+      1
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-exit.o): in function `exit':
+      exit.c:(.text.exit+0x14): undefined reference to `_exit'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_exit): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-exit.o)
+      exit.c:(.text.exit+0x14): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-closer.o): in function `_close_r':
+      closer.c:(.text._close_r+0xc): undefined reference to `_close'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_close): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-closer.o)
+      closer.c:(.text._close_r+0xc): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-lseekr.o): in function `_lseek_r':
+      lseekr.c:(.text._lseek_r+0x12): undefined reference to `_lseek'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_lseek): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-lseekr.o)
+      lseekr.c:(.text._lseek_r+0x12): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-readr.o): in function `_read_r':
+      readr.c:(.text._read_r+0x12): undefined reference to `_read'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_read): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-readr.o)
+      readr.c:(.text._read_r+0x12): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-writer.o): in function `_write_r':
+      writer.c:(.text._write_r+0x12): undefined reference to `_write'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_write): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-writer.o)
+      writer.c:(.text._write_r+0x12): dangerous relocation: unsupported relocation
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-sbrkr.o): in function `_sbrk_r':
+      sbrkr.c:(.text._sbrk_r+0xc): undefined reference to `_sbrk'
+      /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/ld: (_sbrk): Unknown destination type (ARM/Thumb) in /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/libc.a(libc_a-sbrkr.o)
+      sbrkr.c:(.text._sbrk_r+0xc): dangerous relocation: unsupported relocation
+      collect2: error: ld returned 1 exit status
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++ 
+      Build flags: -mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward;-mcpu=cortex-m7;-mfpu=fpv5-d16;-mfloat-abi=hard;-Wall;-fdata-sections;-ffunction-sections;-fno-rtti;-fno-exceptions;-fno-threadsafe-statics;-I;/usr/lib/arm-none-eabi/include;-I;/usr/lib/gcc/arm-none-eabi/*/include;-I;/usr/lib/gcc/arm-none-eabi/*/include-fixed;-I;/usr/lib/arm-none-eabi/include/c++/*;-I;/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi;-I;/usr/lib/arm-none-eabi/include/c++/*/backward
+      Id flags: -c 
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CMakeCXXCompilerId.o"
+      
+      The CXX compiler identification is GNU, found in:
+        /home/mo/code/copperhead_flight_sw/CMakeFiles/3.28.3/CompilerIdCXX/CMakeCXXCompilerId.o
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake:1131 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineASMCompiler.cmake:131 (CMAKE_DETERMINE_COMPILER_ID_VENDOR)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Checking whether the ASM compiler is GNU using "--version" matched "(GNU assembler)|(GCC)|(Free Software Foundation)":
+      arm-none-eabi-gcc (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 15.2.1 20251203
+      Copyright (C) 2025 Free Software Foundation, Inc.
+      This is free software; see the source for copying conditions.  There is NO
+      warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    checks:
+      - "Detecting C compiler ABI info"
+    directories:
+      source: "/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx"
+      binary: "/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: "-mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed"
+      CMAKE_C_FLAGS_DEBUG: "-O0 -g3"
+      CMAKE_EXE_LINKER_FLAGS: "--sysroot=/usr/lib/arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wl,-T,/home/mo/code/copperhead_flight_sw/hal/startup/stm32h730/STM32H730XX_FLASH.ld --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections -Wl,--print-memory-usage"
+    buildResult:
+      variable: "CMAKE_C_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fa4d5/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_fa4d5.dir/build.make CMakeFiles/cmTC_fa4d5.dir/build
+        gmake[1]: Entering directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx'
+        Building C object CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj
+        /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed    -v -o CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c
+        Using built-in specs.
+        COLLECT_GCC=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-15/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://gitlab.arm.com/tooling/gnu-devtools-for-arm/-/issues/ --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-v' '-o' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_fa4d5.dir/'
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1 -quiet -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -imultilib thumb/v7e-m+dp/hard -iprefix /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_fa4d5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -version -fdata-sections -ffunction-sections -o /tmp/ccOuchPT.s
+        GNU C23 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)
+        	compiled by GNU C version 9.2.1 20191120 (Red Hat 9.2.1-2), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include"
+        ignoring nonexistent directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include-fixed"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: b188e82d73c14327741f71b398212fe0
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-v' '-o' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_fa4d5.dir/'
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj /tmp/ccOuchPT.s
+        GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203
+        COMPILER_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-v' '-o' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.'
+        Linking C static library libcmTC_fa4d5.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_fa4d5.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa4d5.dir/link.txt --verbose=1
+        /usr/bin/ar qc libcmTC_fa4d5.a CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj
+        /usr/bin/ranlib libcmTC_fa4d5.a
+        gmake[1]: Leaving directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed C implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include]
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed]
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include]
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include-fixed]
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+        implicit include dirs: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include;/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include-fixed;/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed C implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_fa4d5/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_fa4d5.dir/build.make CMakeFiles/cmTC_fa4d5.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx']
+        ignore line: [Building C object CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed    -v -o CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj -c /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-gcc]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-15/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://gitlab.arm.com/tooling/gnu-devtools-for-arm/-/issues/ --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)']
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-v' '-o' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_fa4d5.dir/']
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1 -quiet -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -imultilib thumb/v7e-m+dp/hard -iprefix /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_fa4d5.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -version -fdata-sections -ffunction-sections -o /tmp/ccOuchPT.s]
+        ignore line: [GNU C23 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 9.2.1 20191120 (Red Hat 9.2.1-2)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include"]
+        ignore line: [ignoring nonexistent directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: b188e82d73c14327741f71b398212fe0]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-v' '-o' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_fa4d5.dir/']
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj /tmp/ccOuchPT.s]
+        ignore line: [GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203]
+        ignore line: [COMPILER_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-v' '-o' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C static library libcmTC_fa4d5.a]
+        ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_fa4d5.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_fa4d5.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/ar qc libcmTC_fa4d5.a CMakeFiles/cmTC_fa4d5.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/usr/bin/ranlib libcmTC_fa4d5.a]
+        ignore line: [gmake[1]: Leaving directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-AC1NKx']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:57 (try_compile)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ"
+      binary: "/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward"
+      CMAKE_CXX_FLAGS_DEBUG: "-O0 -g3"
+      CMAKE_EXE_LINKER_FLAGS: "--sysroot=/usr/lib/arm-none-eabi -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wl,-T,/home/mo/code/copperhead_flight_sw/hal/startup/stm32h730/STM32H730XX_FLASH.ld --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections -Wl,--print-memory-usage"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ'
+        
+        Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4d609/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4d609.dir/build.make CMakeFiles/cmTC_4d609.dir/build
+        gmake[1]: Entering directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ'
+        Building CXX object CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj
+        /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward    -v -o CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++
+        Target: arm-none-eabi
+        Configured with: /data/jenkins/workspace/GNU-toolchain/arm-15/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://gitlab.arm.com/tooling/gnu-devtools-for-arm/-/issues/ --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)'
+        Thread model: single
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-v' '-o' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4d609.dir/'
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1plus -quiet -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -imultilib thumb/v7e-m+dp/hard -iprefix /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4d609.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/cciUlDfN.s
+        GNU C++17 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)
+        	compiled by GNU C version 9.2.1 20191120 (Red Hat 9.2.1-2), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
+        
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/backward"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include"
+        ignoring nonexistent directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include-fixed"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include"
+        ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/backward"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"
+        ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi"
+        ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/backward"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/backward
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include
+        End of search list.
+        Compiler executable checksum: 11dcbadfa8b298132a6bf615d82ed1e4
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-v' '-o' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4d609.dir/'
+         /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cciUlDfN.s
+        GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203
+        COMPILER_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/
+        LIBRARY_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/
+        COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-v' '-o' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX static library libcmTC_4d609.a
+        /usr/bin/cmake -P CMakeFiles/cmTC_4d609.dir/cmake_clean_target.cmake
+        /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d609.dir/link.txt --verbose=1
+        /usr/bin/ar qc libcmTC_4d609.a CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj
+        /usr/bin/ranlib libcmTC_4d609.a
+        gmake[1]: Leaving directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ'
+        
+      exitCode: 0
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:127 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed CXX implicit include dir info: rv=done
+        found start of include info
+        found start of implicit include info
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1]
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/backward]
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include]
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed]
+          add: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include]
+        end of search list found
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/15.2.1]
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/backward] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/backward]
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include]
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include-fixed]
+        collapse include dir [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include] ==> [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+        implicit include dirs: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/15.2.1;/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard;/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include/c++/15.2.1/backward;/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include;/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/lib/gcc/arm-none-eabi/15.2.1/include-fixed;/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include]
+      
+      
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake:159 (message)"
+      - "/usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:31 (project)"
+    message: |
+      Parsed CXX implicit link information:
+        link line regex: [^( *|.*[/\\])(ld|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
+        ignore line: [Change Dir: '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ']
+        ignore line: []
+        ignore line: [Run Build Command(s): /usr/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4d609/fast]
+        ignore line: [/usr/bin/gmake  -f CMakeFiles/cmTC_4d609.dir/build.make CMakeFiles/cmTC_4d609.dir/build]
+        ignore line: [gmake[1]: Entering directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ']
+        ignore line: [Building CXX object CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++   -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -Wall -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward    -v -o CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj -c /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Using built-in specs.]
+        ignore line: [COLLECT_GCC=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/arm-none-eabi-g++]
+        ignore line: [Target: arm-none-eabi]
+        ignore line: [Configured with: /data/jenkins/workspace/GNU-toolchain/arm-15/src/gcc/configure --target=arm-none-eabi --prefix=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install --with-gmp=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpfr=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-mpc=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --with-isl=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/host-tools --disable-shared --disable-nls --disable-threads --enable-checking=release --enable-languages=c,c++,fortran --with-newlib --with-gnu-as --with-headers=yes --with-gnu-ld --with-native-system-header-dir=/include --with-sysroot=/data/jenkins/workspace/GNU-toolchain/arm-15/build-arm-none-eabi/install/arm-none-eabi --with-bugurl=https://gitlab.arm.com/tooling/gnu-devtools-for-arm/-/issues/ --with-multilib-list=aprofile,rmprofile --with-pkgversion='Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)']
+        ignore line: [Thread model: single]
+        ignore line: [Supported LTO compression algorithms: zlib zstd]
+        ignore line: [gcc version 15.2.1 20251203 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) ]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-v' '-o' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4d609.dir/']
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/cc1plus -quiet -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -imultilib thumb/v7e-m+dp/hard -iprefix /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/ -isysroot /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi -D__USES_INITFINI__ /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4d609.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mfpu=fpv5-d16 -mfloat-abi=hard -mcpu=cortex-m7 -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -mlibarch=armv7e-m+fp.dp -march=armv7e-m+fp.dp -Wall -version -fdata-sections -ffunction-sections -fno-rtti -fno-exceptions -fno-threadsafe-statics -o /tmp/cciUlDfN.s]
+        ignore line: [GNU C++17 (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) version 15.2.1 20251203 (arm-none-eabi)]
+        ignore line: [	compiled by GNU C version 9.2.1 20191120 (Red Hat 9.2.1-2)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
+        ignore line: []
+        ignore line: [GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/backward"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include"]
+        ignore line: [ignoring nonexistent directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/usr/local/include"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/include-fixed"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/../../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include"]
+        ignore line: [ignoring duplicate directory "/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/backward"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/gcc/arm-none-eabi/*/include-fixed"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi"]
+        ignore line: [ignoring nonexistent directory "/usr/lib/arm-none-eabi/include/c++/*/backward"]
+        ignore line: [#include "..." search starts here:]
+        ignore line: [#include <...> search starts here:]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/arm-none-eabi/thumb/v7e-m+dp/hard]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include/c++/15.2.1/backward]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/include-fixed]
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/include]
+        ignore line: [End of search list.]
+        ignore line: [Compiler executable checksum: 11dcbadfa8b298132a6bf615d82ed1e4]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-v' '-o' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4d609.dir/']
+        ignore line: [ /home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/as -v -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -I /usr/lib/arm-none-eabi/include -I /usr/lib/gcc/arm-none-eabi/*/include -I /usr/lib/gcc/arm-none-eabi/*/include-fixed -I /usr/lib/arm-none-eabi/include/c++/* -I /usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi -I /usr/lib/arm-none-eabi/include/c++/*/backward -march=armv7e-m+fp.dp -mfloat-abi=hard -mfloat-abi=hard -mfpu=fpv5-d16 -mfpu=fpv5-d16 -meabi=5 -o CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj /tmp/cciUlDfN.s]
+        ignore line: [GNU assembler version 2.45.1 (arm-none-eabi) using BFD version (Arm GNU Toolchain 15.2.Rel1 (Build arm-15.86)) 2.45.1.20251203]
+        ignore line: [COMPILER_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../libexec/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/bin/]
+        ignore line: [LIBRARY_PATH=/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/thumb/v7e-m+dp/hard/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../lib/gcc/arm-none-eabi/15.2.1/../../../../arm-none-eabi/lib/:/home/mo/arm-gnu-toolchain-15.2.rel1-x86_64-arm-none-eabi/bin/../arm-none-eabi/lib/]
+        ignore line: [COLLECT_GCC_OPTIONS='-mfpu=fpv5-d16' '-mfloat-abi=hard' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-mcpu=cortex-m7' '-mfpu=fpv5-d16' '-mfloat-abi=hard' '-Wall' '-fdata-sections' '-ffunction-sections' '-fno-rtti' '-fno-exceptions' '-fno-threadsafe-statics' '-I' '/usr/lib/arm-none-eabi/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include' '-I' '/usr/lib/gcc/arm-none-eabi/*/include-fixed' '-I' '/usr/lib/arm-none-eabi/include/c++/*' '-I' '/usr/lib/arm-none-eabi/include/c++/*/arm-none-eabi' '-I' '/usr/lib/arm-none-eabi/include/c++/*/backward' '-v' '-o' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mthumb' '-mlibarch=armv7e-m+fp.dp' '-march=armv7e-m+fp.dp' '-dumpdir' 'CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX static library libcmTC_4d609.a]
+        ignore line: [/usr/bin/cmake -P CMakeFiles/cmTC_4d609.dir/cmake_clean_target.cmake]
+        ignore line: [/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4d609.dir/link.txt --verbose=1]
+        ignore line: [/usr/bin/ar qc libcmTC_4d609.a CMakeFiles/cmTC_4d609.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/usr/bin/ranlib libcmTC_4d609.a]
+        ignore line: [gmake[1]: Leaving directory '/home/mo/code/copperhead_flight_sw/CMakeFiles/CMakeScratch/TryCompile-cmECkZ']
+        ignore line: []
+        ignore line: []
+        implicit libs: []
+        implicit objs: []
+        implicit dirs: []
+        implicit fwks: []
+      
+      
+...

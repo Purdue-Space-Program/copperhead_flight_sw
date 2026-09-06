@@ -18,7 +18,7 @@ int main(void)
     StaticTask_t idk_bruh[TASK_STATIC_SIZE] = {{0}};
     xTaskCreateStatic(PrintTask, "Print", TASK_STACK_SIZE, NULL, 1, task_stack, idk_bruh);
 
-    vTaskStartScheduler();
+    vTaskStartScheduler(); // starts scheduler
 
     while (true)
     {

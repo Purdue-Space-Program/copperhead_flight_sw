@@ -1,0 +1,3 @@
+/home/mo/code/copperhead_flight_sw/applications/CMakeFiles/src.dir
+/home/mo/code/copperhead_flight_sw/applications/CMakeFiles/edit_cache.dir
+/home/mo/code/copperhead_flight_sw/applications/CMakeFiles/rebuild_cache.dir
