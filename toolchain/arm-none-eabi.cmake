@@ -46,5 +46,5 @@ set(CMAKE_EXECUTABLE_SUFFIX_CXX ".elf")
 
 set(LDSCRIPT "${CMAKE_SOURCE_DIR}/hal/startup/stm32h730/STM32H730XX_FLASH.ld")
 set(CMAKE_EXE_LINKER_FLAGS_INIT
-  "--sysroot=/usr/lib/arm-none-eabi ${TARGET_FLAGS} -Wl,-T,${LDSCRIPT} --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections -Wl,--print-memory-usage"
+  "--sysroot=/usr/lib/arm-none-eabi ${TARGET_FLAGS} -T \"${LDSCRIPT}\" --specs=nano.specs --specs=nosys.specs -Wl,--gc-sections -Wl,--print-memory-usage"
 )
