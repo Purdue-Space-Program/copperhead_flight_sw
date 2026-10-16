@@ -62,3 +62,8 @@ build/
 
 # macos specific file
 .DS_Store
+
+# IDE and editor project files
+.project
+.settings/
+.vscode/
